@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "app/package.json",
+      "use": "@vercel/node",
+      "config": {
+        "externalDirs": ["app"]
+      }
+    }
+  ],
+  "projects": [
+    {
+      "name": "api",
+      "use": "@vercel/node",
+      "src": "api",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": "3000"
+      }
+    }
+  ],
+  "env": {
+    "REACT_APP_API_URL": "https://opentrails-api-542596148138.us-central1.run.app/api"
+  }
+}

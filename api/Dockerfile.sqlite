@@ -1,0 +1,34 @@
+# Cloud Run Dockerfile for OpenTrails API with bundled SQLite database
+FROM node:20-slim
+
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install production dependencies
+RUN npm ci --only=production
+
+# Copy application code
+COPY index.js ./
+COPY db.js ./
+COPY db.js.bak ./db.js.bak 2>/dev/null || true
+COPY import-trails.js ./
+COPY hiking-project-sync.js ./
+
+# Copy pre-populated SQLite database
+COPY opentrails.db ./
+
+# Expose port for Cloud Run
+EXPOSE 8080
+
+# Set environment variables
+ENV NODE_ENV=production
+ENV PORT=8080
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+  CMD node -e "require('http').get('http://localhost:8080/api/health', (r) => {if (r.statusCode !== 200) throw new Error(r.statusCode)})"
+
+# Start application
+CMD ["node", "index.js"]

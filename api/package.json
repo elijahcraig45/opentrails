@@ -1,0 +1,29 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "OpenTrails REST API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "prod": "node index-postgres.js",
+    "import-trails": "node import-trails-geojson.js",
+    "fetch-trails": "python fetch-trails-osm.py",
+    "sync-trails": "python fetch-trails-osm.py --state CO && node import-trails-geojson.js trails_co.geojson"
+  },
+  "keywords": [
+    "trails",
+    "api",
+    "express"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "better-sqlite3": "^12.9.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pg": "^8.20.0"
+  }
+}

@@ -1,0 +1,111 @@
+- generic [ref=e3]:
+  - generic [ref=e6]:
+    - generic [ref=e8]:
+      - generic [ref=e9]: 🥾
+      - generic [ref=e10]: OpenTrails
+      - generic [ref=e11]: Discover Your Next Adventure
+      - generic [ref=e12]:
+        - generic [ref=e13]:
+          - generic [ref=e14]: "17"
+          - generic [ref=e15]: Trails
+        - generic [ref=e17]:
+          - generic [ref=e18]: "10"
+          - generic [ref=e19]: States
+      - generic [ref=e21] [cursor=pointer]: ✨ Explore Trails
+    - textbox "🔍 Search trails by name..." [ref=e23]
+    - generic [ref=e24]:
+      - generic [ref=e49]:
+        - generic [ref=e50]: State
+        - generic [ref=e52]:
+          - generic [ref=e54] [cursor=pointer]: All
+          - generic [ref=e56] [cursor=pointer]: AZ
+          - generic [ref=e58] [cursor=pointer]: CA
+          - generic [ref=e60] [cursor=pointer]: CO
+          - generic [ref=e62] [cursor=pointer]: ID
+          - generic [ref=e64] [cursor=pointer]: MT
+          - generic [ref=e66] [cursor=pointer]: NM
+          - generic [ref=e68] [cursor=pointer]: NV
+          - generic [ref=e70] [cursor=pointer]: OR
+          - generic [ref=e72] [cursor=pointer]: UT
+          - generic [ref=e74] [cursor=pointer]: WA
+      - generic [ref=e25]:
+        - generic [ref=e26]: Difficulty
+        - generic [ref=e27]:
+          - generic [ref=e29] [cursor=pointer]: All
+          - generic [ref=e31] [cursor=pointer]: Easy
+          - generic [ref=e33] [cursor=pointer]: Moderate
+          - generic [ref=e35] [cursor=pointer]: Strenuous
+    - generic [ref=e37] [cursor=pointer]:
+      - generic [ref=e38]: 📂 Collections
+      - generic [ref=e39]: ▶
+    - generic [ref=e963]:
+      - generic [ref=e964]: 17 Trails
+      - generic [ref=e965]: 🔗 Live Data
+    - generic [ref=e966]:
+      - generic [ref=e967]: Trails (17)
+      - generic [ref=e969]:
+        - generic [ref=e970] [cursor=pointer]:
+          - generic [ref=e971]: Rattlesnake Ridge Trail
+          - generic [ref=e972]: 4.0 mi ·
+        - generic [ref=e973] [cursor=pointer]:
+          - generic [ref=e974]: Rattlesnake Lake Trail
+          - generic [ref=e975]: 2.2 mi ·
+        - generic [ref=e976] [cursor=pointer]:
+          - generic [ref=e977]: Mount Rainier - Skyline Trail
+          - generic [ref=e978]: 9.4 mi ·
+        - generic [ref=e979] [cursor=pointer]:
+          - generic [ref=e980]: Mount Rainier NP - Skyline Loop Trail
+          - generic [ref=e981]: 9.4 mi ·
+        - generic [ref=e982] [cursor=pointer]:
+          - generic [ref=e983]: North Cascades NP - Cascade Pass Trail
+          - generic [ref=e984]: 7.7 mi ·
+        - generic [ref=e985] [cursor=pointer]:
+          - generic [ref=e986]: Olympic NP - Hoh Rain Forest Loop
+          - generic [ref=e987]: 3.0 mi ·
+        - generic [ref=e988] [cursor=pointer]:
+          - generic [ref=e989]: Mount Rainier Summit Trail
+          - generic [ref=e990]: 14.0 mi ·
+        - generic [ref=e991] [cursor=pointer]:
+          - generic [ref=e992]: Skyline Trail
+          - generic [ref=e993]: 9.0 mi ·
+        - generic [ref=e994] [cursor=pointer]:
+          - generic [ref=e995]: Paradise to Panorama Point
+          - generic [ref=e996]: 3.0 mi ·
+        - generic [ref=e997] [cursor=pointer]:
+          - generic [ref=e998]: North Cascades Highway
+          - generic [ref=e999]: 9.0 mi ·
+        - generic [ref=e1000] [cursor=pointer]:
+          - generic [ref=e1001]: Lake Union Scenic Loop
+          - generic [ref=e1002]: 2.0 mi ·
+        - generic [ref=e1003] [cursor=pointer]:
+          - generic [ref=e1004]: Olympic Hot Springs
+          - generic [ref=e1005]: 6.8 mi ·
+        - generic [ref=e1006] [cursor=pointer]:
+          - generic [ref=e1007]: Cliffs of Neah Bay
+          - generic [ref=e1008]: 5.0 mi ·
+        - generic [ref=e1009] [cursor=pointer]:
+          - generic [ref=e1010]: Rattlesnake Mountain
+          - generic [ref=e1011]: 6.0 mi ·
+        - generic [ref=e1012] [cursor=pointer]:
+          - generic [ref=e1013]: Table Mountain Loop
+          - generic [ref=e1014]: 4.5 mi ·
+        - generic [ref=e1015] [cursor=pointer]:
+          - generic [ref=e1016]: Deception Pass Bridge Loop
+          - generic [ref=e1017]: 3.0 mi ·
+        - generic [ref=e1018] [cursor=pointer]:
+          - generic [ref=e1019]: Goat Lake Trail
+          - generic [ref=e1020]: 6.8 mi ·
+  - generic [ref=e48]:
+    - region "Map" [ref=e955]
+    - group [ref=e956]:
+      - generic "Toggle attribution" [ref=e957] [cursor=pointer]
+      - generic [ref=e958]:
+        - link "MapLibre" [ref=e959] [cursor=pointer]:
+          - /url: https://maplibre.org/
+        - text: "| ©"
+        - link "CARTO" [ref=e960] [cursor=pointer]:
+          - /url: https://carto.com/about-carto/
+        - text: ", ©"
+        - link "OpenStreetMap" [ref=e961] [cursor=pointer]:
+          - /url: http://www.openstreetmap.org/about/
+        - text: contributors

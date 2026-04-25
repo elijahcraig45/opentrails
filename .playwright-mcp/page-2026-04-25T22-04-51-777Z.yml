@@ -1,0 +1,13 @@
+- generic [ref=e10]:
+  - generic [ref=e11]: OpenTrails
+  - generic [ref=e12]: Discover & Track Your Hikes
+  - generic [ref=e13]:
+    - generic [ref=e14]: Email Address
+    - textbox "you@example.com" [ref=e15]
+    - generic [ref=e16]: Password
+    - generic [ref=e17]:
+      - textbox "Enter your password" [ref=e18]
+      - generic [ref=e19]: 🔒
+    - generic [ref=e20]: Sign In
+    - generic [ref=e23] [cursor=pointer]: Don't have an account? Sign Up
+  - generic [ref=e25]: Continue to explore trails while logged out

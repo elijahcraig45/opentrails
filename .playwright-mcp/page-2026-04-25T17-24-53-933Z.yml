@@ -1,0 +1,28 @@
+- generic [ref=e2]:
+  - generic [ref=e6]:
+    - generic [ref=e8]:
+      - generic [ref=e9]: 🥾
+      - generic [ref=e10]: OpenTrails
+      - generic [ref=e11]: Discover Your Next Adventure
+      - generic [ref=e12]:
+        - generic [ref=e13]:
+          - generic [ref=e14]: "0"
+          - generic [ref=e15]: Trails
+        - generic [ref=e17]:
+          - generic [ref=e18]: "0"
+          - generic [ref=e19]: States
+      - generic [ref=e21] [cursor=pointer]: ✨ Explore Trails
+    - textbox "🔍 Search trails by name..." [ref=e23]
+    - generic [ref=e25]:
+      - generic [ref=e26]: Difficulty
+      - generic [ref=e27]:
+        - generic [ref=e29] [cursor=pointer]: All
+        - generic [ref=e31] [cursor=pointer]: Easy
+        - generic [ref=e33] [cursor=pointer]: Moderate
+        - generic [ref=e35] [cursor=pointer]: Strenuous
+    - generic [ref=e36]:
+      - progressbar [ref=e37]:
+        - img [ref=e39]
+      - generic [ref=e42]: Loading trails...
+  - generic:
+    - img

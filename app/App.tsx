@@ -1,0 +1,414 @@
+import { Platform, StyleSheet, Text, View, ActivityIndicator, ScrollView, TouchableOpacity } from 'react-native';
+import React, { useState, useMemo, useEffect } from 'react';
+import { SearchBar, FilterButtons, StateFilter, ActivityForm, TrailCard, TrailListView, TrailDetailPage, LoginScreen, SignUpScreen, UserProfileScreen } from './src/components';
+import { TrailFeature, GeoJSONFeatureCollection } from './src/types';
+import { AuthProvider, useAuth } from './src/context/AuthContext';
+
+const isWeb = Platform.OS === 'web';
+
+// In development (localhost), use the local API
+// In production, use the cloud API
+const API_BASE_URL = typeof window !== 'undefined' && window.location.hostname === 'localhost'
+  ? 'http://localhost:3001/api'
+  : 'https://opentrails-api-542596148138.us-central1.run.app/api';
+
+type ViewMode = 'list' | 'map';
+
+// Main app content (requires auth)
+function MainApp() {
+  // Load from static GeoJSON as fallback
+  const fallbackGeojsonData = require('./assets/boulder_trails.geojson');
+  
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedDifficulty, setSelectedDifficulty] = useState<string | null>(null);
+  const [selectedState, setSelectedState] = useState<string | null>(null);
+  const [selectedTrail, setSelectedTrail] = useState<TrailFeature | null>(null);
+  const [favorites, setFavorites] = useState<Set<string>>(new Set());
+  const [viewMode, setViewMode] = useState<ViewMode>('list');
+  const [showActivityForm, setShowActivityForm] = useState(false);
+  const [availableStates, setAvailableStates] = useState<string[]>([]);
+  
+  // API vs Static data toggle
+  const [useAPI, setUseAPI] = useState(true);
+  const [loading, setLoading] = useState(useAPI);
+  const [apiData, setApiData] = useState<GeoJSONFeatureCollection | null>(null);
+
+  // Fetch available states on mount
+  useEffect(() => {
+    if (!useAPI || !isWeb) return;
+
+    const fetchStates = async () => {
+      try {
+        const response = await fetch(`${API_BASE_URL}/states`);
+        if (!response.ok) throw new Error('Failed to fetch states');
+        const data = await response.json();
+        setAvailableStates(data.states || []);
+      } catch (err) {
+        console.error('Failed to fetch states:', err);
+      }
+    };
+
+    fetchStates();
+  }, [useAPI]);
+
+  // Fetch trails from API on component mount or when filters change
+  useEffect(() => {
+    if (!useAPI || !isWeb) {
+      setLoading(false);
+      return;
+    }
+
+    const fetchTrails = async () => {
+      setLoading(true);
+      try {
+        const params = new URLSearchParams();
+        if (selectedDifficulty && selectedDifficulty !== 'All') {
+          params.append('difficulty', selectedDifficulty);
+        }
+        if (selectedState) {
+          params.append('state', selectedState);
+        }
+        if (searchQuery) {
+          params.append('search', searchQuery);
+        }
+
+        const response = await fetch(`${API_BASE_URL}/trails?${params}`);
+        if (!response.ok) throw new Error('Failed to fetch trails');
+        
+        const data: GeoJSONFeatureCollection = await response.json();
+        setApiData({
+          type: 'FeatureCollection',
+          name: 'Trails',
+          features: (data.features || []).map((f: any, idx: number) => ({
+            ...f,
+            id: f.id || idx,
+          })),
+        });
+      } catch (err) {
+        console.error('API fetch failed, falling back to static data:', err);
+        setUseAPI(false);
+      }
+      setLoading(false);
+    };
+
+    fetchTrails();
+  }, [searchQuery, selectedDifficulty, selectedState, useAPI]);
+
+  // Use API data if available, otherwise fall back to static
+  const geojsonData = useAPI && apiData ? apiData : fallbackGeojsonData;
+  
+  // Enrich features with IDs if not from API
+  const enrichedData = useMemo(() => ({
+    ...geojsonData,
+    features: (geojsonData.features || []).map((f: any, idx: number) => ({
+      ...f,
+      id: f.id || `trail-${idx}`,
+    })),
+  }), [geojsonData]);
+
+  // Filter trails by search and difficulty
+  const filteredData = useMemo(() => {
+    const filtered = enrichedData.features.filter((feature: TrailFeature) => {
+      const name = feature.properties.name.toLowerCase();
+      const matchesSearch = searchQuery === '' || name.includes(searchQuery.toLowerCase());
+      const matchesDifficulty = !selectedDifficulty || selectedDifficulty === 'All' || 
+        feature.properties.estimated_difficulty === selectedDifficulty;
+      const matchesState = !selectedState || feature.properties.state === selectedState;
+      
+      return matchesSearch && matchesDifficulty && matchesState;
+    });
+    return { ...enrichedData, features: filtered };
+  }, [enrichedData, searchQuery, selectedDifficulty, selectedState]);
+
+  const handleFavoritePress = (trail: TrailFeature) => {
+    const trailId = String(trail.id);
+    const newFavorites = new Set(favorites);
+    if (newFavorites.has(trailId)) {
+      newFavorites.delete(trailId);
+    } else {
+      newFavorites.add(trailId);
+    }
+    setFavorites(newFavorites);
+  };
+
+  if (!isWeb) {
+    return (
+      <View style={styles.container}>
+        <Text>Map not supported on native yet in this prototype.</Text>
+      </View>
+    );
+  }
+
+  // Show trail detail page if a trail is selected
+  if (selectedTrail && showActivityForm) {
+    return (
+      <View style={styles.container}>
+        <ActivityForm
+          selectedTrailName={selectedTrail.properties.name}
+          selectedTrailDistance={selectedTrail.properties.length_km || selectedTrail.properties.length_meters / 1000}
+          onActivityStart={() => {
+            setShowActivityForm(false);
+            setSelectedTrail(null);
+          }}
+        />
+      </View>
+    );
+  }
+
+  if (selectedTrail) {
+    return (
+      <View style={styles.container}>
+        <TrailDetailPage
+          trail={selectedTrail}
+          onClose={() => setSelectedTrail(null)}
+          onStartActivity={() => setShowActivityForm(true)}
+          isFavorite={favorites.has(String(selectedTrail.id))}
+          onFavoritePress={() => handleFavoritePress(selectedTrail)}
+        />
+      </View>
+    );
+  }
+
+  // Main content area
+  return (
+    <View style={styles.container}>
+      {/* Header */}
+      <View style={styles.header}>
+        <Text style={styles.title}>🥾 OpenTrails</Text>
+        <View style={styles.viewToggle}>
+          <TouchableOpacity
+            style={[styles.viewToggleBtn, viewMode === 'list' && styles.viewToggleBtnActive]}
+            onPress={() => setViewMode('list')}
+          >
+            <Text style={[styles.viewToggleBtnText, viewMode === 'list' && styles.viewToggleBtnTextActive]}>
+              📋 Tiles
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.viewToggleBtn, viewMode === 'map' && styles.viewToggleBtnActive]}
+            onPress={() => setViewMode('map')}
+          >
+            <Text style={[styles.viewToggleBtnText, viewMode === 'map' && styles.viewToggleBtnTextActive]}>
+              🗺️ Map
+            </Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+
+      {/* Search Bar */}
+      <SearchBar value={searchQuery} onChangeText={setSearchQuery} />
+
+      {/* Filters */}
+      <View style={styles.filtersSection}>
+        <View style={styles.filterRow}>
+          <StateFilter 
+            states={availableStates}
+            selectedState={selectedState}
+            onStateChange={setSelectedState}
+          />
+          <FilterButtons 
+            difficulties={['All', 'Easy', 'Moderate', 'Strenuous']}
+            selectedDifficulty={selectedDifficulty || 'All'}
+            onDifficultyChange={(d) => setSelectedDifficulty(d === 'All' ? null : d)}
+          />
+        </View>
+      </View>
+
+      {/* Main Content */}
+      <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
+        {viewMode === 'list' ? (
+          <TrailListView
+            trails={filteredData.features}
+            searchQuery={searchQuery}
+            selectedDifficulty={selectedDifficulty}
+            selectedState={selectedState}
+            onTrailPress={setSelectedTrail}
+            onFavoritePress={handleFavoritePress}
+            favorites={favorites}
+            loading={loading && useAPI}
+          />
+        ) : (
+          <View style={styles.mapPlaceholder}>
+            <Text style={styles.mapPlaceholderTitle}>🗺️ Map View Coming Soon</Text>
+            <Text style={styles.mapPlaceholderText}>
+              Interactive map view is coming in the next update!
+            </Text>
+          </View>
+        )}
+      </ScrollView>
+    </View>
+  );
+}
+
+// Auth wrapper component that handles login/signup flow
+function AuthenticationFlow() {
+  const { user, loading } = useAuth();
+  const [screen, setScreen] = useState<'login' | 'signup' | 'app' | 'profile'>('login');
+
+  if (loading) {
+    return (
+      <View style={styles.loadingScreen}>
+        <ActivityIndicator size="large" color="#3b82f6" />
+        <Text style={styles.loadingScreenText}>Loading...</Text>
+      </View>
+    );
+  }
+
+  if (!user) {
+    return screen === 'login' ? (
+      <LoginScreen 
+        onSignUpPress={() => setScreen('signup')}
+      />
+    ) : (
+      <SignUpScreen 
+        onLoginPress={() => setScreen('login')}
+      />
+    );
+  }
+
+  if (screen === 'profile') {
+    return (
+      <UserProfileScreen 
+        onActivityPress={() => setScreen('app')}
+        onSettingsPress={() => setScreen('app')}
+      />
+    );
+  }
+
+  return (
+    <View style={styles.appWrapper}>
+      {/* Profile button in top right */}
+      <View style={styles.topBar}>
+        <Text style={styles.appTitle}>🥾 OpenTrails</Text>
+        <Text 
+          style={styles.profileButton}
+          onPress={() => setScreen('profile')}
+        >
+          👤 {user.displayName || user.email?.split('@')[0] || 'Profile'}
+        </Text>
+      </View>
+      <MainApp />
+    </View>
+  );
+}
+
+// Root component - wrap with AuthProvider
+export default function App() {
+  return (
+    <AuthProvider>
+      <AuthenticationFlow />
+    </AuthProvider>
+  );
+}
+
+const styles = StyleSheet.create({
+  loadingScreen: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+  },
+  loadingScreenText: {
+    marginTop: 12,
+    fontSize: 16,
+    color: '#666',
+  },
+  appWrapper: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  topBar: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    backgroundColor: '#f8f9fa',
+    borderBottomWidth: 1,
+    borderBottomColor: '#e5e7eb',
+  },
+  appTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#1f2937',
+  },
+  profileButton: {
+    fontSize: 14,
+    color: '#3b82f6',
+    fontWeight: '500',
+  },
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    flexDirection: 'column',
+  },
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    backgroundColor: '#f8f9fa',
+    borderBottomWidth: 1,
+    borderBottomColor: '#e5e7eb',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: '700',
+    color: '#1f2937',
+  },
+  viewToggle: {
+    flexDirection: 'row',
+    gap: 8,
+  },
+  viewToggleBtn: {
+    paddingVertical: 8,
+    paddingHorizontal: 12,
+    borderRadius: 6,
+    backgroundColor: '#e5e7eb',
+  },
+  viewToggleBtnActive: {
+    backgroundColor: '#3b82f6',
+  },
+  viewToggleBtnText: {
+    fontSize: 13,
+    fontWeight: '600',
+    color: '#333',
+  },
+  viewToggleBtnTextActive: {
+    color: '#fff',
+  },
+  filtersSection: {
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    backgroundColor: '#fff',
+    borderBottomWidth: 1,
+    borderBottomColor: '#f0f0f0',
+  },
+  filterRow: {
+    flexDirection: 'row',
+    gap: 12,
+  },
+  content: {
+    flex: 1,
+    paddingHorizontal: 8,
+  },
+  mapPlaceholder: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingVertical: 100,
+  },
+  mapPlaceholderTitle: {
+    fontSize: 24,
+    fontWeight: '700',
+    color: '#333',
+    marginBottom: 12,
+  },
+  mapPlaceholderText: {
+    fontSize: 16,
+    color: '#666',
+    textAlign: 'center',
+    maxWidth: 300,
+  },
+});

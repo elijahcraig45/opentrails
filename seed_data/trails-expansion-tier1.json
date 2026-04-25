@@ -1,0 +1,885 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rocky Mountain High Trail - RMNP",
+        "difficulty": "Strenuous",
+        "elevation_gain_meters": 1067,
+        "length_meters": 14485,
+        "description": "Steep alpine ascent to 12,000ft with spectacular views",
+        "state": "CO",
+        "park": "Rocky Mountain National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-105.8, 40.35],
+          [-105.75, 40.38],
+          [-105.72, 40.42]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sky Pond Trail",
+        "difficulty": "Strenuous",
+        "elevation_gain_meters": 914,
+        "length_meters": 9656,
+        "description": "Scenic alpine lake with waterfall views",
+        "state": "CO",
+        "park": "Rocky Mountain National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-105.68, 40.28],
+          [-105.64, 40.32],
+          [-105.61, 40.35]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Emerald Lake Trail",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 427,
+        "length_meters": 4828,
+        "description": "Easy hike to pristine mountain lakes",
+        "state": "CO",
+        "park": "Rocky Mountain National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-105.65, 40.25],
+          [-105.62, 40.28],
+          [-105.59, 40.31]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bear Lake Loop",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 76,
+        "length_meters": 1609,
+        "description": "Flat scenic loop perfect for families",
+        "state": "CO",
+        "park": "Rocky Mountain National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-105.68, 40.31],
+          [-105.65, 40.32],
+          [-105.63, 40.30]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nymph Lake Trail",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 152,
+        "length_meters": 2414,
+        "description": "Quick scenic lake trail with excellent views",
+        "state": "CO",
+        "park": "Rocky Mountain National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-105.68, 40.30],
+          [-105.66, 40.32],
+          [-105.64, 40.34]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Half Dome Trail",
+        "difficulty": "Strenuous",
+        "elevation_gain_meters": 1676,
+        "length_meters": 22530,
+        "description": "Epic two day hike with cable descent",
+        "state": "CA",
+        "park": "Yosemite National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-119.53, 37.74],
+          [-119.54, 37.73],
+          [-119.52, 37.71]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mist Trail to Vernal Fall",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 488,
+        "length_meters": 7242,
+        "description": "Steep waterfall hike with misty spray",
+        "state": "CA",
+        "park": "Yosemite National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-119.54, 37.76],
+          [-119.53, 37.74],
+          [-119.52, 37.72]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lower Yosemite Fall Trail",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 61,
+        "length_meters": 2414,
+        "description": "Quick waterfall trail accessible to all",
+        "state": "CA",
+        "park": "Yosemite National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-119.58, 37.79],
+          [-119.56, 37.80],
+          [-119.55, 37.78]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mirror Lake Loop",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 152,
+        "length_meters": 8047,
+        "description": "Scenic loop with valley views",
+        "state": "CA",
+        "park": "Yosemite National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-119.56, 37.76],
+          [-119.54, 37.75],
+          [-119.55, 37.73]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tenaya Lake Trail",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 91,
+        "length_meters": 3219,
+        "description": "Beautiful alpine lake with granite backdrops",
+        "state": "CA",
+        "park": "Yosemite National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-119.43, 37.85],
+          [-119.42, 37.84],
+          [-119.41, 37.85]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Angels Landing",
+        "difficulty": "Strenuous",
+        "elevation_gain_meters": 488,
+        "length_meters": 8846,
+        "description": "Steep sandstone peak with chains",
+        "state": "UT",
+        "park": "Zion National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-112.27, 37.27],
+          [-112.26, 37.28],
+          [-112.25, 37.29]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Narrows",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 61,
+        "length_meters": 9656,
+        "description": "Hike through Virgin River canyon",
+        "state": "UT",
+        "park": "Zion National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-112.28, 37.31],
+          [-112.27, 37.30],
+          [-112.26, 37.29]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Riverside Walk",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 76,
+        "length_meters": 3219,
+        "description": "Scenic riverside trail to Narrows entrance",
+        "state": "UT",
+        "park": "Zion National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-112.29, 37.31],
+          [-112.28, 37.30],
+          [-112.27, 37.31]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Observation Point Trail",
+        "difficulty": "Strenuous",
+        "elevation_gain_meters": 762,
+        "length_meters": 12870,
+        "description": "High elevation viewpoint overlooking Zion Canyon",
+        "state": "UT",
+        "park": "Zion National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-112.26, 37.25],
+          [-112.24, 37.24],
+          [-112.23, 37.26]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Crater Lake Rim Trail",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 305,
+        "length_meters": 11265,
+        "description": "Stunning volcanic crater views",
+        "state": "OR",
+        "park": "Crater Lake National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-122.11, 42.94],
+          [-122.10, 42.95],
+          [-122.09, 42.94]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Watchman Trail",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 183,
+        "length_meters": 3219,
+        "description": "Quick trail to viewpoint overlooking crater lake",
+        "state": "OR",
+        "park": "Crater Lake National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-122.12, 42.92],
+          [-122.11, 42.93],
+          [-122.10, 42.92]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mount Rainier Summit Trail",
+        "difficulty": "Strenuous",
+        "elevation_gain_meters": 2438,
+        "length_meters": 22530,
+        "description": "Two-day alpine expedition to 14,410ft summit",
+        "state": "WA",
+        "park": "Mount Rainier National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-121.76, 46.85],
+          [-121.74, 46.83],
+          [-121.72, 46.82]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Skyline Trail",
+        "difficulty": "Strenuous",
+        "elevation_gain_meters": 1524,
+        "length_meters": 14485,
+        "description": "High elevation loop with wildflowers and views",
+        "state": "WA",
+        "park": "Mount Rainier National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-121.75, 46.88],
+          [-121.73, 46.87],
+          [-121.71, 46.88]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Paradise to Panorama Point",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 305,
+        "length_meters": 4828,
+        "description": "Alpine meadow trail with mountain views",
+        "state": "WA",
+        "park": "Mount Rainier National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-121.74, 46.78],
+          [-121.73, 46.79],
+          [-121.72, 46.80]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Delicate Arch Trail",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 152,
+        "length_meters": 6437,
+        "description": "Desert hike to iconic natural arch",
+        "state": "UT",
+        "park": "Arches National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-109.50, 38.74],
+          [-109.49, 38.73],
+          [-109.48, 38.74]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Devil's Garden Primitive Loop",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 183,
+        "length_meters": 14485,
+        "description": "Extended arch viewing loop",
+        "state": "UT",
+        "park": "Arches National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-109.51, 38.82],
+          [-109.50, 38.81],
+          [-109.49, 38.82]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Wave",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 305,
+        "length_meters": 10973,
+        "description": "Stunning desert rock formation - permit required",
+        "state": "AZ",
+        "park": "Vermilion Cliffs National Monument"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-112.29, 37.00],
+          [-112.30, 36.98],
+          [-112.31, 36.99]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grand Canyon South Rim Trail",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 305,
+        "length_meters": 21850,
+        "description": "East to west rim trail with canyon views",
+        "state": "AZ",
+        "park": "Grand Canyon National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-111.36, 36.06],
+          [-111.35, 36.05],
+          [-111.34, 36.06]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bright Angel Trail",
+        "difficulty": "Strenuous",
+        "elevation_gain_meters": 1646,
+        "length_meters": 21850,
+        "description": "Popular descent into Grand Canyon",
+        "state": "AZ",
+        "park": "Grand Canyon National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-112.05, 36.46],
+          [-112.06, 36.45],
+          [-112.07, 36.44]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Multnomah Falls Loop",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 244,
+        "length_meters": 3219,
+        "description": "Scenic waterfall with bridge",
+        "state": "OR",
+        "park": "Columbia River Gorge National Scenic Area"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-122.58, 45.57],
+          [-122.57, 45.56],
+          [-122.56, 45.57]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lost Lake Trail",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 152,
+        "length_meters": 4828,
+        "description": "Scenic alpine lake with Mount Hood views",
+        "state": "OR",
+        "park": "Mount Hood National Forest"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-121.78, 45.30],
+          [-121.77, 45.31],
+          [-121.76, 45.30]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "North Cascades Highway",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 488,
+        "length_meters": 14485,
+        "description": "Scenic pass hike with glacier views",
+        "state": "WA",
+        "park": "North Cascades National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-121.21, 48.53],
+          [-121.20, 48.52],
+          [-121.19, 48.51]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lake Union Scenic Loop",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 61,
+        "length_meters": 3219,
+        "description": "Urban trail with city views",
+        "state": "WA",
+        "park": "Seattle Urban Parks"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-122.33, 47.64],
+          [-122.32, 47.63],
+          [-122.31, 47.64]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Canyonlands Island in the Sky",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 305,
+        "length_meters": 12870,
+        "description": "Desert canyon rim trail",
+        "state": "UT",
+        "park": "Canyonlands National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-109.90, 38.38],
+          [-109.89, 38.37],
+          [-109.88, 38.38]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sequoia Grove Trail",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 244,
+        "length_meters": 2414,
+        "description": "Giant sequoia forest hike",
+        "state": "CA",
+        "park": "Sequoia National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-118.75, 36.65],
+          [-118.74, 36.66],
+          [-118.73, 36.65]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Moro Rock",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 305,
+        "length_meters": 2414,
+        "description": "Steep rock scramble with panoramic views",
+        "state": "CA",
+        "park": "Sequoia National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-118.76, 36.63],
+          [-118.75, 36.62],
+          [-118.74, 36.63]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hidden Valley Trail",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 91,
+        "length_meters": 2414,
+        "description": "Desert valley with rock formations",
+        "state": "CA",
+        "park": "Joshua Tree National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-116.31, 34.03],
+          [-116.30, 34.02],
+          [-116.29, 34.03]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Barker Dam Nature Trail",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 61,
+        "length_meters": 3219,
+        "description": "Historic dam with wildlife viewing",
+        "state": "CA",
+        "park": "Joshua Tree National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-116.27, 34.10],
+          [-116.26, 34.09],
+          [-116.25, 34.10]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bryce Canyon Rim Trail",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 244,
+        "length_meters": 11265,
+        "description": "Scenic hoodoo viewpoint trail",
+        "state": "UT",
+        "park": "Bryce Canyon National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-112.18, 37.57],
+          [-112.17, 37.56],
+          [-112.16, 37.57]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Navajo Loop Trail",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 488,
+        "length_meters": 4828,
+        "description": "Descend into Bryce Canyon via switchbacks",
+        "state": "UT",
+        "park": "Bryce Canyon National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-112.18, 37.63],
+          [-112.17, 37.62],
+          [-112.16, 37.63]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Timpanogos Wilderness Loop",
+        "difficulty": "Strenuous",
+        "elevation_gain_meters": 1371,
+        "length_meters": 17703,
+        "description": "Alpine loop with 11,700ft peak",
+        "state": "UT",
+        "park": "Uinta National Forest"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-111.64, 40.40],
+          [-111.63, 40.39],
+          [-111.62, 40.40]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Maroon Bells Loop",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 305,
+        "length_meters": 4828,
+        "description": "Colorado's most photographed peaks",
+        "state": "CO",
+        "park": "White River National Forest"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-106.25, 39.08],
+          [-106.24, 39.07],
+          [-106.23, 39.08]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sand Lake Preserve Trail",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 76,
+        "length_meters": 2414,
+        "description": "Wetland preserve with bird watching",
+        "state": "CO",
+        "park": "Colorado Parks & Wildlife"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-105.45, 40.20],
+          [-105.44, 40.19],
+          [-105.43, 40.20]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Moraine Lake Loop",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 152,
+        "length_meters": 3219,
+        "description": "Glacial blue lake with mountain backdrop",
+        "state": "CA",
+        "park": "Kings Canyon National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-118.71, 36.76],
+          [-118.70, 36.75],
+          [-118.69, 36.76]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Olympic Hot Springs",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 305,
+        "length_meters": 10973,
+        "description": "Forest trail to natural hot springs",
+        "state": "WA",
+        "park": "Olympic National Forest"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-123.79, 48.08],
+          [-123.78, 48.07],
+          [-123.77, 48.08]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cape Perpetua Loop",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 244,
+        "length_meters": 9656,
+        "description": "Coastal scenic loop with ocean views",
+        "state": "OR",
+        "park": "Cape Perpetua Scenic Area"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-124.11, 44.28],
+          [-124.10, 44.27],
+          [-124.09, 44.28]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Smith and Bybee Wetlands Trail",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 0,
+        "length_meters": 4828,
+        "description": "Flat wetland preserve with wildlife",
+        "state": "OR",
+        "park": "Smith and Bybee Wetlands"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-122.79, 45.58],
+          [-122.78, 45.57],
+          [-122.77, 45.58]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Horseshoe Bend",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 244,
+        "length_meters": 3219,
+        "description": "Iconic Colorado River bend viewpoint",
+        "state": "AZ",
+        "park": "Glen Canyon National Recreation Area"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-111.50, 36.87],
+          [-111.49, 36.86],
+          [-111.48, 36.87]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cathedral Rock Trail",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 183,
+        "length_meters": 2414,
+        "description": "Red rock formation with vortex views",
+        "state": "AZ",
+        "park": "Coconino National Forest"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-111.77, 34.88],
+          [-111.76, 34.87],
+          [-111.75, 34.88]
+        ]
+      }
+    }
+  ]
+}

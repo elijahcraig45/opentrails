@@ -1,0 +1,462 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: OpenTrails
+      - generic [ref=e7]: 🔗 API | 144 trails
+    - textbox "Search trails..." [active] [ref=e8]
+    - generic [ref=e9]:
+      - generic [ref=e10]: Difficulty
+      - generic [ref=e11]:
+        - generic [ref=e13] [cursor=pointer]: All
+        - generic [ref=e15] [cursor=pointer]: Easy
+        - generic [ref=e17] [cursor=pointer]: Moderate
+        - generic [ref=e19] [cursor=pointer]: Strenuous
+    - generic [ref=e20]:
+      - generic [ref=e21]: Trails (144)
+      - generic [ref=e23]:
+        - generic [ref=e24] [cursor=pointer]:
+          - generic [ref=e25]: 19th Street Pedestrian Bridge
+          - generic [ref=e26]: 0.1 mi · Easy
+        - generic [ref=e27] [cursor=pointer]:
+          - generic [ref=e28]: 1st Flatiron Bridge
+          - generic [ref=e29]: 0.0 mi · Easy
+        - generic [ref=e30] [cursor=pointer]:
+          - generic [ref=e31]: 1st/2nd Flatiron
+          - generic [ref=e32]: 0.8 mi · Easy
+        - generic [ref=e33] [cursor=pointer]:
+          - generic [ref=e34]: 22nd Street Path
+          - generic [ref=e35]: 0.2 mi · Easy
+        - generic [ref=e36] [cursor=pointer]:
+          - generic [ref=e37]: 22nd Street Pedestrian Bridge
+          - generic [ref=e38]: 0.1 mi · Easy
+        - generic [ref=e39] [cursor=pointer]:
+          - generic [ref=e40]: 28th Street Path
+          - generic [ref=e41]: 0.1 mi · Easy
+        - generic [ref=e42] [cursor=pointer]:
+          - generic [ref=e43]: 3rd Flatiron
+          - generic [ref=e44]: 0.2 mi · Easy
+        - generic [ref=e45] [cursor=pointer]:
+          - generic [ref=e46]: 6th Street Connector Trail
+          - generic [ref=e47]: 0.3 mi · Easy
+        - generic [ref=e48] [cursor=pointer]:
+          - generic [ref=e49]: 6th Street Connector West Trail
+          - generic [ref=e50]: 0.0 mi · Easy
+        - generic [ref=e51] [cursor=pointer]:
+          - generic [ref=e52]: 7th Street Connector
+          - generic [ref=e53]: 0.0 mi · Easy
+        - generic [ref=e54] [cursor=pointer]:
+          - generic [ref=e55]: 8th Street Connector
+          - generic [ref=e56]: 0.0 mi · Easy
+        - generic [ref=e57] [cursor=pointer]:
+          - generic [ref=e58]: Access Trail
+          - generic [ref=e59]: 0.0 mi · Easy
+        - generic [ref=e60] [cursor=pointer]:
+          - generic [ref=e61]: Amphitheater Expressway
+          - generic [ref=e62]: 0.2 mi · Easy
+        - generic [ref=e63] [cursor=pointer]:
+          - generic [ref=e64]: Amphitheater Trail
+          - generic [ref=e65]: 0.4 mi · Easy
+        - generic [ref=e66] [cursor=pointer]:
+          - generic [ref=e67]: Anemone Loop Trail
+          - generic [ref=e68]: 2.8 mi · Moderate
+        - generic [ref=e69] [cursor=pointer]:
+          - generic [ref=e70]: Anemone Loop Trail - Anemone Point
+          - generic [ref=e71]: 0.0 mi · Easy
+        - generic [ref=e72] [cursor=pointer]:
+          - generic [ref=e73]: Anemone Loop Trail - Reflection Point
+          - generic [ref=e74]: 0.0 mi · Easy
+        - generic [ref=e75] [cursor=pointer]:
+          - generic [ref=e76]: Apache Trail
+          - generic [ref=e77]: 0.0 mi · Easy
+        - generic [ref=e78] [cursor=pointer]:
+          - generic [ref=e79]: Artist Point
+          - generic [ref=e80]: 0.1 mi · Easy
+        - generic [ref=e81] [cursor=pointer]:
+          - generic [ref=e82]: Baseline Connector Trail
+          - generic [ref=e83]: 0.0 mi · Easy
+        - generic [ref=e84] [cursor=pointer]:
+          - generic [ref=e85]: Baseline Road South Path
+          - generic [ref=e86]: 0.1 mi · Easy
+        - generic [ref=e87] [cursor=pointer]:
+          - generic [ref=e88]: Baseline Trail
+          - generic [ref=e89]: 0.5 mi · Easy
+        - generic [ref=e90] [cursor=pointer]:
+          - generic [ref=e91]: Baseline-Gregory Connector Trail
+          - generic [ref=e92]: 0.1 mi · Easy
+        - generic [ref=e93] [cursor=pointer]:
+          - generic [ref=e94]: Bear Canyon
+          - generic [ref=e95]: 2.2 mi · Moderate
+        - generic [ref=e96] [cursor=pointer]:
+          - generic [ref=e97]: Bear Canyon - NCAR
+          - generic [ref=e98]: 0.7 mi · Easy
+        - generic [ref=e99] [cursor=pointer]:
+          - generic [ref=e100]: Bear Canyon - NCAR Trail
+          - generic [ref=e101]: 0.4 mi · Easy
+        - generic [ref=e102] [cursor=pointer]:
+          - generic [ref=e103]: Bear Peak
+          - generic [ref=e104]: 0.0 mi · demanding_mountain_hiking
+        - generic [ref=e105] [cursor=pointer]:
+          - generic [ref=e106]: Bear Peak Trail
+          - generic [ref=e107]: 0.3 mi · mountain_hiking
+        - generic [ref=e108] [cursor=pointer]:
+          - generic [ref=e109]: Bear Peak West Ridge
+          - generic [ref=e110]: 0.1 mi · Easy
+        - generic [ref=e111] [cursor=pointer]:
+          - generic [ref=e112]: Bear Peak West Ridge Trail
+          - generic [ref=e113]: 1.7 mi · Easy
+        - generic [ref=e114] [cursor=pointer]:
+          - generic [ref=e115]: Bluebell Hiking Trail
+          - generic [ref=e116]: 0.6 mi · Easy
+        - generic [ref=e117] [cursor=pointer]:
+          - generic [ref=e118]: Bluebell Mesa Trail
+          - generic [ref=e119]: 0.3 mi · Easy
+        - generic [ref=e120] [cursor=pointer]:
+          - generic [ref=e121]: Bluebell Road
+          - generic [ref=e122]: 0.0 mi · Easy
+        - generic [ref=e123] [cursor=pointer]:
+          - generic [ref=e124]: Bluebell Road Trail
+          - generic [ref=e125]: 0.2 mi · Easy
+        - generic [ref=e126] [cursor=pointer]:
+          - generic [ref=e127]: Bluebell Spur Trail
+          - generic [ref=e128]: 0.5 mi · Easy
+        - generic [ref=e129] [cursor=pointer]:
+          - generic [ref=e130]: Bluebell-Baird Trail
+          - generic [ref=e131]: 0.6 mi · Easy
+        - generic [ref=e132] [cursor=pointer]:
+          - generic [ref=e133]: Bluestem Connector
+          - generic [ref=e134]: 0.5 mi · Easy
+        - generic [ref=e135] [cursor=pointer]:
+          - generic [ref=e136]: Boulder Creek 19th St Connection
+          - generic [ref=e137]: 0.1 mi · Easy
+        - generic [ref=e138] [cursor=pointer]:
+          - generic [ref=e139]: Boulder Creek Path
+          - generic [ref=e140]: 0.1 mi · Easy
+        - generic [ref=e141] [cursor=pointer]:
+          - generic [ref=e142]: Boy Scout Trail
+          - generic [ref=e143]: 0.7 mi · Easy
+        - generic [ref=e144] [cursor=pointer]:
+          - generic [ref=e145]: Broadway Path
+          - generic [ref=e146]: 0.0 mi · Easy
+        - generic [ref=e147] [cursor=pointer]:
+          - generic [ref=e148]: Central Campus Mall
+          - generic [ref=e149]: 0.3 mi · Easy
+        - generic [ref=e150] [cursor=pointer]:
+          - generic [ref=e151]: Chapman Drive
+          - generic [ref=e152]: 2.3 mi · Moderate
+        - generic [ref=e153] [cursor=pointer]:
+          - generic [ref=e154]: Chautauqua Trail
+          - generic [ref=e155]: 0.7 mi · Easy
+        - generic [ref=e156] [cursor=pointer]:
+          - generic [ref=e157]: Colorado Avenue Path
+          - generic [ref=e158]: 0.0 mi · Easy
+        - generic [ref=e159] [cursor=pointer]:
+          - generic [ref=e160]: Cragmoor Connector
+          - generic [ref=e161]: 0.2 mi · Easy
+        - generic [ref=e162] [cursor=pointer]:
+          - generic [ref=e163]: Crown Rock
+          - generic [ref=e164]: 0.4 mi · Easy
+        - generic [ref=e165] [cursor=pointer]:
+          - generic [ref=e166]: Crown Rock Climbing Areas
+          - generic [ref=e167]: 0.5 mi · Easy
+        - generic [ref=e168] [cursor=pointer]:
+          - generic [ref=e169]: Devils Thumb Access
+          - generic [ref=e170]: 0.1 mi · Easy
+        - generic [ref=e171] [cursor=pointer]:
+          - generic [ref=e172]: Dinosaur Rock
+          - generic [ref=e173]: 0.0 mi · Easy
+        - generic [ref=e174] [cursor=pointer]:
+          - generic [ref=e175]: E.M. Greenman Trail
+          - generic [ref=e176]: 1.5 mi · Easy
+        - generic [ref=e177] [cursor=pointer]:
+          - generic [ref=e178]: Elephant Buttress
+          - generic [ref=e179]: 0.1 mi · Easy
+        - generic [ref=e180] [cursor=pointer]:
+          - generic [ref=e181]: Enchanted - McClintock Spur
+          - generic [ref=e182]: 0.1 mi · Easy
+        - generic [ref=e183] [cursor=pointer]:
+          - generic [ref=e184]: Enchanted Mesa
+          - generic [ref=e185]: 0.0 mi · Easy
+        - generic [ref=e186] [cursor=pointer]:
+          - generic [ref=e187]: Enchanted Mesa Trail
+          - generic [ref=e188]: 1.1 mi · Easy
+        - generic [ref=e189] [cursor=pointer]:
+          - generic [ref=e190]: Enchanted-Kohler Spur Trail
+          - generic [ref=e191]: 0.1 mi · Easy
+        - generic [ref=e192] [cursor=pointer]:
+          - generic [ref=e193]: Ethel Harrold Road
+          - generic [ref=e194]: 0.9 mi · Easy
+        - generic [ref=e195] [cursor=pointer]:
+          - generic [ref=e196]: Fern Canyon
+          - generic [ref=e197]: 0.4 mi · Easy
+        - generic [ref=e198] [cursor=pointer]:
+          - generic [ref=e199]: Fern Canyon Trail
+          - generic [ref=e200]: 0.9 mi · mountain_hiking
+        - generic [ref=e201] [cursor=pointer]:
+          - generic [ref=e202]: Flagstaff Trail
+          - generic [ref=e203]: 2.0 mi · Moderate
+        - generic [ref=e204] [cursor=pointer]:
+          - generic [ref=e205]: Flatirons Descent
+          - generic [ref=e206]: 0.2 mi · Easy
+        - generic [ref=e207] [cursor=pointer]:
+          - generic [ref=e208]: Flatirons Loop Trail
+          - generic [ref=e209]: 0.5 mi · Easy
+        - generic [ref=e210] [cursor=pointer]:
+          - generic [ref=e211]: Four Pines
+          - generic [ref=e212]: 0.1 mi · Easy
+        - generic [ref=e213] [cursor=pointer]:
+          - generic [ref=e214]: Four Pines Trail
+          - generic [ref=e215]: 1.1 mi · Easy
+        - generic [ref=e216] [cursor=pointer]:
+          - generic [ref=e217]: Golden Meadow Trail
+          - generic [ref=e218]: 0.8 mi · Easy
+        - generic [ref=e219] [cursor=pointer]:
+          - generic [ref=e220]: Green Bear Trail
+          - generic [ref=e221]: 1.4 mi · Easy
+        - generic [ref=e222] [cursor=pointer]:
+          - generic [ref=e223]: Green Mountain West Ridge Trail
+          - generic [ref=e224]: 1.9 mi · Moderate
+        - generic [ref=e225] [cursor=pointer]:
+          - generic [ref=e226]: Greenbriar Connector Trail
+          - generic [ref=e227]: 0.7 mi · Easy
+        - generic [ref=e228] [cursor=pointer]:
+          - generic [ref=e229]: Gregory Canyon Trail
+          - generic [ref=e230]: 1.2 mi · Easy
+        - generic [ref=e231] [cursor=pointer]:
+          - generic [ref=e232]: Halfway House
+          - generic [ref=e233]: 0.2 mi · Easy
+        - generic [ref=e234] [cursor=pointer]:
+          - generic [ref=e235]: Holly Berry
+          - generic [ref=e236]: 0.2 mi · Easy
+        - generic [ref=e237] [cursor=pointer]:
+          - generic [ref=e238]: Kohler Mesa Trail
+          - generic [ref=e239]: 0.6 mi · Easy
+        - generic [ref=e240] [cursor=pointer]:
+          - generic [ref=e241]: Kohler Spur Trail
+          - generic [ref=e242]: 0.2 mi · Easy
+        - generic [ref=e243] [cursor=pointer]:
+          - generic [ref=e244]: Lehigh Connector - South
+          - generic [ref=e245]: 0.4 mi · Easy
+        - generic [ref=e246] [cursor=pointer]:
+          - generic [ref=e247]: Leslie B. Wood Bridge
+          - generic [ref=e248]: 0.0 mi · Easy
+        - generic [ref=e249] [cursor=pointer]:
+          - generic [ref=e250]: Long Canyon Trail
+          - generic [ref=e251]: 1.4 mi · Easy
+        - generic [ref=e252] [cursor=pointer]:
+          - generic [ref=e253]: Lost Gulch
+          - generic [ref=e254]: 0.1 mi · Easy
+        - generic [ref=e255] [cursor=pointer]:
+          - generic [ref=e256]: Lower Big Bluestem Trail
+          - generic [ref=e257]: 1.8 mi · Easy
+        - generic [ref=e258] [cursor=pointer]:
+          - generic [ref=e259]: Mallory Cave Trail
+          - generic [ref=e260]: 0.8 mi · Easy
+        - generic [ref=e261] [cursor=pointer]:
+          - generic [ref=e262]: May's Point Trail
+          - generic [ref=e263]: 0.1 mi · Easy
+        - generic [ref=e264] [cursor=pointer]:
+          - generic [ref=e265]: McClintock Lower
+          - generic [ref=e266]: 0.2 mi · Easy
+        - generic [ref=e267] [cursor=pointer]:
+          - generic [ref=e268]: McClintock Lower Trail
+          - generic [ref=e269]: 0.2 mi · Easy
+        - generic [ref=e270] [cursor=pointer]:
+          - generic [ref=e271]: McClintock Upper Trail
+          - generic [ref=e272]: 0.4 mi · mountain_hiking
+        - generic [ref=e273] [cursor=pointer]:
+          - generic [ref=e274]: Meadow Trail
+          - generic [ref=e275]: 0.5 mi · Easy
+        - generic [ref=e276] [cursor=pointer]:
+          - generic [ref=e277]: Mesa
+          - generic [ref=e278]: 0.1 mi · Easy
+        - generic [ref=e279] [cursor=pointer]:
+          - generic [ref=e280]: Mesa Trail
+          - generic [ref=e281]: 4.6 mi · Moderate
+        - generic [ref=e282] [cursor=pointer]:
+          - generic [ref=e283]: Mesa Trail connector
+          - generic [ref=e284]: 0.1 mi · Easy
+        - generic [ref=e285] [cursor=pointer]:
+          - generic [ref=e286]: Middle Fork Shanahan Trail
+          - generic [ref=e287]: 0.7 mi · hiking
+        - generic [ref=e288] [cursor=pointer]:
+          - generic [ref=e289]: N.C.A.R.
+          - generic [ref=e290]: 0.2 mi · Easy
+        - generic [ref=e291] [cursor=pointer]:
+          - generic [ref=e292]: N.C.A.R. - Bear Connector
+          - generic [ref=e293]: 0.5 mi · Easy
+        - generic [ref=e294] [cursor=pointer]:
+          - generic [ref=e295]: N.C.A.R. - Skunk Canyon
+          - generic [ref=e296]: 0.2 mi · Easy
+        - generic [ref=e297] [cursor=pointer]:
+          - generic [ref=e298]: N.C.A.R. - Table Mesa
+          - generic [ref=e299]: 0.5 mi · Easy
+        - generic [ref=e300] [cursor=pointer]:
+          - generic [ref=e301]: N.C.A.R. - Table Mesa/Bear
+          - generic [ref=e302]: 0.5 mi · Easy
+        - generic [ref=e303] [cursor=pointer]:
+          - generic [ref=e304]: N.C.A.R. Trail
+          - generic [ref=e305]: 0.7 mi · Easy
+        - generic [ref=e306] [cursor=pointer]:
+          - generic [ref=e307]: N.C.A.R. Water Tank Road
+          - generic [ref=e308]: 0.3 mi · Easy
+        - generic [ref=e309] [cursor=pointer]:
+          - generic [ref=e310]: NIST Service Road
+          - generic [ref=e311]: 0.7 mi · Easy
+        - generic [ref=e312] [cursor=pointer]:
+          - generic [ref=e313]: Nebel Horn
+          - generic [ref=e314]: 0.1 mi · Easy
+        - generic [ref=e315] [cursor=pointer]:
+          - generic [ref=e316]: Panorama Trail
+          - generic [ref=e317]: 0.3 mi · Easy
+        - generic [ref=e318] [cursor=pointer]:
+          - generic [ref=e319]: Pearl Street Mall
+          - generic [ref=e320]: 0.0 mi · Easy
+        - generic [ref=e321] [cursor=pointer]:
+          - generic [ref=e322]: Pipe Town Path
+          - generic [ref=e323]: 0.1 mi · Easy
+        - generic [ref=e324] [cursor=pointer]:
+          - generic [ref=e325]: Plains Overlook
+          - generic [ref=e326]: 0.1 mi · Easy
+        - generic [ref=e327] [cursor=pointer]:
+          - generic [ref=e328]: Plains Overlook Trail
+          - generic [ref=e329]: 0.2 mi · Easy
+        - generic [ref=e330] [cursor=pointer]:
+          - generic [ref=e331]: Range View Trail
+          - generic [ref=e332]: 0.7 mi · Easy
+        - generic [ref=e333] [cursor=pointer]:
+          - generic [ref=e334]: Ranger Trail
+          - generic [ref=e335]: 1.3 mi · Easy
+        - generic [ref=e336] [cursor=pointer]:
+          - generic [ref=e337]: Red Devil
+          - generic [ref=e338]: 0.2 mi · Easy
+        - generic [ref=e339] [cursor=pointer]:
+          - generic [ref=e340]: Red Rocks
+          - generic [ref=e341]: 0.0 mi · Easy
+        - generic [ref=e342] [cursor=pointer]:
+          - generic [ref=e343]: Red Rocks Spur
+          - generic [ref=e344]: 0.4 mi · Easy
+        - generic [ref=e345] [cursor=pointer]:
+          - generic [ref=e346]: Red Rocks Spur Trail
+          - generic [ref=e347]: 1.2 mi · Easy
+        - generic [ref=e348] [cursor=pointer]:
+          - generic [ref=e349]: Red Rocks Trail
+          - generic [ref=e350]: 0.5 mi · Easy
+        - generic [ref=e351] [cursor=pointer]:
+          - generic [ref=e352]: Royal Arch
+          - generic [ref=e353]: 0.8 mi · Easy
+        - generic [ref=e354] [cursor=pointer]:
+          - generic [ref=e355]: Royal Arch Trail
+          - generic [ref=e356]: 0.2 mi · hiking
+        - generic [ref=e357] [cursor=pointer]:
+          - generic [ref=e358]: Sacred Cliffs
+          - generic [ref=e359]: 0.9 mi · Easy
+        - generic [ref=e360] [cursor=pointer]:
+          - generic [ref=e361]: Saddle Rock
+          - generic [ref=e362]: 0.3 mi · Easy
+        - generic [ref=e363] [cursor=pointer]:
+          - generic [ref=e364]: Saddle Rock Trail
+          - generic [ref=e365]: 1.2 mi · Easy
+        - generic [ref=e366] [cursor=pointer]:
+          - generic [ref=e367]: Scott Carpenter Path
+          - generic [ref=e368]: 0.3 mi · Easy
+        - generic [ref=e369] [cursor=pointer]:
+          - generic [ref=e370]: Sensory
+          - generic [ref=e371]: 0.1 mi · Easy
+        - generic [ref=e372] [cursor=pointer]:
+          - generic [ref=e373]: Shadow Canyon North Trail
+          - generic [ref=e374]: 0.6 mi · Easy
+        - generic [ref=e375] [cursor=pointer]:
+          - generic [ref=e376]: Shadow Canyon Trail
+          - generic [ref=e377]: 1.1 mi · Easy
+        - generic [ref=e378] [cursor=pointer]:
+          - generic [ref=e379]: Shanahan - Mesa Trail
+          - generic [ref=e380]: 0.5 mi · Easy
+        - generic [ref=e381] [cursor=pointer]:
+          - generic [ref=e382]: Shanahan - North Fork
+          - generic [ref=e383]: 0.5 mi · Easy
+        - generic [ref=e384] [cursor=pointer]:
+          - generic [ref=e385]: Shanahan - North Fork Trail
+          - generic [ref=e386]: 0.7 mi · Easy
+        - generic [ref=e387] [cursor=pointer]:
+          - generic [ref=e388]: Shanahan - South Fork Trail
+          - generic [ref=e389]: 1.8 mi · Easy
+        - generic [ref=e390] [cursor=pointer]:
+          - generic [ref=e391]: Shanahan Connector
+          - generic [ref=e392]: 0.4 mi · Easy
+        - generic [ref=e393] [cursor=pointer]:
+          - generic [ref=e394]: Ski Jump Trail
+          - generic [ref=e395]: 0.2 mi · Easy
+        - generic [ref=e396] [cursor=pointer]:
+          - generic [ref=e397]: Skunk Canyon
+          - generic [ref=e398]: 0.4 mi · Easy
+        - generic [ref=e399] [cursor=pointer]:
+          - generic [ref=e400]: Skunk Canyon Spur Trail
+          - generic [ref=e401]: 0.2 mi · Easy
+        - generic [ref=e402] [cursor=pointer]:
+          - generic [ref=e403]: Skunk Canyon Trail
+          - generic [ref=e404]: 1.0 mi · Easy
+        - generic [ref=e405] [cursor=pointer]:
+          - generic [ref=e406]: Skunk Connector
+          - generic [ref=e407]: 0.2 mi · Easy
+        - generic [ref=e408] [cursor=pointer]:
+          - generic [ref=e409]: South Boulder Creek West Trail
+          - generic [ref=e410]: 1.0 mi · Easy
+        - generic [ref=e411] [cursor=pointer]:
+          - generic [ref=e412]: South Boulder Peak Trail
+          - generic [ref=e413]: 0.3 mi · demanding_mountain_hiking
+        - generic [ref=e414] [cursor=pointer]:
+          - generic [ref=e415]: Spy
+          - generic [ref=e416]: 0.1 mi · Easy
+        - generic [ref=e417] [cursor=pointer]:
+          - generic [ref=e418]: Sunshine Canyon Trail
+          - generic [ref=e419]: 0.3 mi · Easy
+        - generic [ref=e420] [cursor=pointer]:
+          - generic [ref=e421]: Tenderfoot
+          - generic [ref=e422]: 1.0 mi · Easy
+        - generic [ref=e423] [cursor=pointer]:
+          - generic [ref=e424]: The Dome
+          - generic [ref=e425]: 0.1 mi · Easy
+        - generic [ref=e426] [cursor=pointer]:
+          - generic [ref=e427]: The Regency climbing access Trail
+          - generic [ref=e428]: 0.2 mi · Easy
+        - generic [ref=e429] [cursor=pointer]:
+          - generic [ref=e430]: Unnamed Trail
+          - generic [ref=e431]: 144.9 mi · hiking
+        - generic [ref=e432] [cursor=pointer]:
+          - generic [ref=e433]: Upper Big Bluestem Trail
+          - generic [ref=e434]: 1.0 mi · Easy
+        - generic [ref=e435] [cursor=pointer]:
+          - generic [ref=e436]: Ute Trail
+          - generic [ref=e437]: 0.9 mi · Easy
+        - generic [ref=e438] [cursor=pointer]:
+          - generic [ref=e439]: Varsity Bridge
+          - generic [ref=e440]: 0.0 mi · Easy
+        - generic [ref=e441] [cursor=pointer]:
+          - generic [ref=e442]: Viewpoint Trail
+          - generic [ref=e443]: 1.0 mi · Easy
+        - generic [ref=e444] [cursor=pointer]:
+          - generic [ref=e445]: Walker Ranch Loop
+          - generic [ref=e446]: 0.9 mi · Easy
+        - generic [ref=e447] [cursor=pointer]:
+          - generic [ref=e448]: Wolf Law path
+          - generic [ref=e449]: 0.0 mi · Easy
+        - generic [ref=e450] [cursor=pointer]:
+          - generic [ref=e451]: Woods Quarry Trail
+          - generic [ref=e452]: 0.4 mi · Easy
+        - generic [ref=e453] [cursor=pointer]:
+          - generic [ref=e454]: wheelchair ramp
+          - generic [ref=e455]: 0.1 mi · Easy
+  - generic [ref=e457]:
+    - region "Map" [ref=e458]
+    - group [ref=e459]:
+      - generic "Toggle attribution" [ref=e460] [cursor=pointer]
+      - generic [ref=e461]:
+        - link "MapLibre" [ref=e462] [cursor=pointer]:
+          - /url: https://maplibre.org/
+        - text: "| ©"
+        - link "CARTO" [ref=e463] [cursor=pointer]:
+          - /url: https://carto.com/about-carto/
+        - text: ", ©"
+        - link "OpenStreetMap" [ref=e464] [cursor=pointer]:
+          - /url: http://www.openstreetmap.org/about/
+        - text: contributors

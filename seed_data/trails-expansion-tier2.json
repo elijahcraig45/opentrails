@@ -1,0 +1,745 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cathedral Lakes Trail",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 488,
+        "length_meters": 12870,
+        "description": "Alpine lakes with scenic canyon views",
+        "state": "NV",
+        "park": "Great Basin National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-114.24, 38.98],
+          [-114.23, 38.97],
+          [-114.22, 38.98]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wheeler Peak Trail",
+        "difficulty": "Strenuous",
+        "elevation_gain_meters": 1524,
+        "length_meters": 20117,
+        "description": "Second highest peak in Nevada at 13,063ft",
+        "state": "NV",
+        "park": "Great Basin National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-114.25, 38.98],
+          [-114.23, 38.96],
+          [-114.21, 38.95]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Valley of Fire Loop",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 152,
+        "length_meters": 4828,
+        "description": "Red sandstone formations and desert landscape",
+        "state": "NV",
+        "park": "Valley of Fire State Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-114.52, 36.43],
+          [-114.51, 36.42],
+          [-114.50, 36.43]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Red Rock Canyon Loop",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 244,
+        "length_meters": 8047,
+        "description": "Scenic drive and trail through colorful rocks",
+        "state": "NV",
+        "park": "Red Rock Canyon National Conservation Area"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-115.44, 36.14],
+          [-115.43, 36.13],
+          [-115.42, 36.14]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Carlsbad Caverns Trail",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 122,
+        "length_meters": 3219,
+        "description": "Underground cave formations with paved trail",
+        "state": "NM",
+        "park": "Carlsbad Caverns National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-104.44, 32.14],
+          [-104.43, 32.13],
+          [-104.42, 32.14]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Guadalupe Peak Trail",
+        "difficulty": "Strenuous",
+        "elevation_gain_meters": 914,
+        "length_meters": 16093,
+        "description": "Texas and New Mexico's highest peak",
+        "state": "NM",
+        "park": "Guadalupe Mountains National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-104.87, 31.89],
+          [-104.85, 31.87],
+          [-104.83, 31.88]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "White Mountains Scenic Loop",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 305,
+        "length_meters": 9656,
+        "description": "High elevation forest with mountain views",
+        "state": "NM",
+        "park": "Apache-Sitgreaves National Forests"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-109.41, 33.98],
+          [-109.40, 33.97],
+          [-109.39, 33.98]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kasha-Katuwe Tent Rocks",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 183,
+        "length_meters": 4828,
+        "description": "Unique conical rock formations",
+        "state": "NM",
+        "park": "Kasha-Katuwe Tent Rocks National Monument"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-106.54, 35.48],
+          [-106.53, 35.47],
+          [-106.52, 35.48]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Boise Foothills Ridgeline",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 488,
+        "length_meters": 14485,
+        "description": "High elevation ridge with 360 degree views",
+        "state": "ID",
+        "park": "Boise Foothills"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-116.16, 43.62],
+          [-116.15, 43.61],
+          [-116.14, 43.62]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Craters of the Moon Loop",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 152,
+        "length_meters": 6437,
+        "description": "Unique volcanic landscape with lava tubes",
+        "state": "ID",
+        "park": "Craters of the Moon National Monument"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-113.51, 43.42],
+          [-113.50, 43.41],
+          [-113.49, 43.42]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Stanley Lake Cirque",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 305,
+        "length_meters": 8047,
+        "description": "Alpine lake with peak reflections",
+        "state": "ID",
+        "park": "Challis National Forest"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-115.00, 44.23],
+          [-114.99, 44.22],
+          [-114.98, 44.23]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Glacier National Park High Line",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 366,
+        "length_meters": 19312,
+        "description": "One of the most scenic trails in the US",
+        "state": "MT",
+        "park": "Glacier National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-113.87, 48.54],
+          [-113.85, 48.53],
+          [-113.83, 48.54]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mount Jackson",
+        "difficulty": "Strenuous",
+        "elevation_gain_meters": 914,
+        "length_meters": 12870,
+        "description": "High alpine peak with panoramic views",
+        "state": "MT",
+        "park": "Glacier National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-113.93, 48.48],
+          [-113.92, 48.47],
+          [-113.91, 48.48]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gunsight Lake Trail",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 457,
+        "length_meters": 12870,
+        "description": "Scenic lake surrounded by peaks",
+        "state": "MT",
+        "park": "Glacier National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-113.80, 48.45],
+          [-113.79, 48.44],
+          [-113.78, 48.45]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Beartooth Highway Scenic Loop",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 488,
+        "length_meters": 14485,
+        "description": "High mountain pass with alpine scenery",
+        "state": "MT",
+        "park": "Custer National Forest"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-110.44, 45.24],
+          [-110.42, 45.23],
+          [-110.40, 45.24]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Painted Hills Loop",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 152,
+        "length_meters": 4828,
+        "description": "Colorful geological formations",
+        "state": "OR",
+        "park": "John Day Fossil Beds National Monument"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-119.74, 44.44],
+          [-119.73, 44.43],
+          [-119.72, 44.44]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wallowa Lake Loop",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 91,
+        "length_meters": 3219,
+        "description": "Alpine lake with mountain views",
+        "state": "OR",
+        "park": "Wallowa-Whitman National Forest"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-117.24, 45.43],
+          [-117.23, 45.42],
+          [-117.22, 45.43]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Smith Rock Climbing Area",
+        "difficulty": "Strenuous",
+        "elevation_gain_meters": 244,
+        "length_meters": 3219,
+        "description": "World-class rock climbing destination",
+        "state": "OR",
+        "park": "Smith Rock State Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-121.32, 44.40],
+          [-121.31, 44.39],
+          [-121.30, 44.40]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cliffs of Neah Bay",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 305,
+        "length_meters": 8047,
+        "description": "Ocean cliffs with sea arch views",
+        "state": "WA",
+        "park": "Makah Indian Reservation"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-124.63, 48.37],
+          [-124.62, 48.36],
+          [-124.61, 48.37]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rattlesnake Mountain",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 427,
+        "length_meters": 9656,
+        "description": "Elevation gain with valley views",
+        "state": "WA",
+        "park": "Rattlesnake Mountain Wilderness"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-121.57, 47.68],
+          [-121.56, 47.67],
+          [-121.55, 47.68]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Table Mountain Loop",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 244,
+        "length_meters": 7242,
+        "description": "Table top mountain with panoramic views",
+        "state": "WA",
+        "park": "Snoqualmie National Forest"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-121.59, 47.46],
+          [-121.58, 47.45],
+          [-121.57, 47.46]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Longs Peak Trail",
+        "difficulty": "Strenuous",
+        "elevation_gain_meters": 1463,
+        "length_meters": 21850,
+        "description": "Colorado's most famous peak at 14,259ft",
+        "state": "CO",
+        "park": "Rocky Mountain National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-105.64, 40.25],
+          [-105.62, 40.24],
+          [-105.60, 40.25]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mount Bierstadt",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 700,
+        "length_meters": 11265,
+        "description": "Easiest 14-thousand foot peak in Colorado",
+        "state": "CO",
+        "park": "Pike National Forest"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-105.49, 39.44],
+          [-105.47, 39.43],
+          [-105.45, 39.44]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Garden of the Gods Perimeter",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 305,
+        "length_meters": 8047,
+        "description": "Iconic red rock formations",
+        "state": "CO",
+        "park": "Garden of the Gods Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-104.87, 38.89],
+          [-104.86, 38.88],
+          [-104.85, 38.89]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rattlesnake Creek Trail",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 152,
+        "length_meters": 6437,
+        "description": "Creek side hike with waterfall",
+        "state": "CA",
+        "park": "Los Padres National Forest"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-120.68, 34.48],
+          [-120.67, 34.47],
+          [-120.66, 34.48]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Torrey Pines Coastal Cliffs",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 183,
+        "length_meters": 4828,
+        "description": "Coastal bluffs with ocean views",
+        "state": "CA",
+        "park": "Torrey Pines State Natural Reserve"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-117.25, 32.92],
+          [-117.24, 32.91],
+          [-117.23, 32.92]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Big Sur McWay Falls",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 244,
+        "length_meters": 3219,
+        "description": "Scenic coastal waterfall hike",
+        "state": "CA",
+        "park": "Julia Pfeiffer Burns State Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-121.81, 36.23],
+          [-121.80, 36.22],
+          [-121.79, 36.23]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mono Lake Circuit",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 152,
+        "length_meters": 4828,
+        "description": "Unique salt lake with tufa towers",
+        "state": "CA",
+        "park": "Inyo National Forest"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-119.19, 38.00],
+          [-119.18, 37.99],
+          [-119.17, 38.00]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Devils Postpile Loop",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 122,
+        "length_meters": 3219,
+        "description": "Basalt column geological formation",
+        "state": "CA",
+        "park": "Devils Postpile National Monument"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-119.08, 37.68],
+          [-119.07, 37.67],
+          [-119.06, 37.68]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Modoc Plateau Volcanic Trail",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 183,
+        "length_meters": 4828,
+        "description": "Lava beds and volcanic cones",
+        "state": "CA",
+        "park": "Lava Beds National Monument"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-121.51, 41.71],
+          [-121.50, 41.70],
+          [-121.49, 41.71]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mount Shasta Summit",
+        "difficulty": "Strenuous",
+        "elevation_gain_meters": 2134,
+        "length_meters": 20117,
+        "description": "California's most prominent peak at 14,179ft",
+        "state": "CA",
+        "park": "Mount Shasta Wilderness"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-122.31, 41.31],
+          [-122.30, 41.30],
+          [-122.29, 41.31]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Deception Pass Bridge Loop",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 152,
+        "length_meters": 4828,
+        "description": "Island loop with water views",
+        "state": "WA",
+        "park": "Deception Pass State Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-122.63, 48.40],
+          [-122.62, 48.39],
+          [-122.61, 48.40]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Goat Lake Trail",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 366,
+        "length_meters": 10973,
+        "description": "Alpine lake in North Cascades",
+        "state": "WA",
+        "park": "North Cascades National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-121.35, 48.69],
+          [-121.34, 48.68],
+          [-121.33, 48.69]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Waterfall Canyon Loop",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 305,
+        "length_meters": 9656,
+        "description": "Desert canyon with waterfall",
+        "state": "UT",
+        "park": "Grand Staircase-Escalante National Monument"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-111.58, 37.46],
+          [-111.57, 37.45],
+          [-111.56, 37.46]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Wave - Easy Alternative",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 183,
+        "length_meters": 5486,
+        "description": "Scenic desert with colorful rocks",
+        "state": "AZ",
+        "park": "Vermilion Cliffs National Monument"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-112.31, 37.02],
+          [-112.32, 37.01],
+          [-112.33, 37.02]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Havasu Falls",
+        "difficulty": "Moderate",
+        "elevation_gain_meters": 305,
+        "length_meters": 16093,
+        "description": "Turquoise waterfall in Grand Canyon",
+        "state": "AZ",
+        "park": "Grand Canyon National Park"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-110.43, 36.26],
+          [-110.42, 36.25],
+          [-110.41, 36.26]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Walnut Creek Trail",
+        "difficulty": "Easy",
+        "elevation_gain_meters": 122,
+        "length_meters": 4828,
+        "description": "Creek side hike with wildlife",
+        "state": "AZ",
+        "park": "Apache-Sitgreaves National Forests"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-110.85, 34.45],
+          [-110.84, 34.44],
+          [-110.83, 34.45]
+        ]
+      }
+    }
+  ]
+}

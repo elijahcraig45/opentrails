@@ -1,0 +1,563 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1001,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-105.5, 39.8], [-105.4, 39.9], [-105.3, 40.0]]
+      },
+      "properties": {
+        "name": "Rocky Mountain NP - Bear Lake Trail",
+        "difficulty": "Easy",
+        "length_miles": 1.6,
+        "length_meters": 2574.97,
+        "elevation_gain_feet": 75,
+        "elevation_gain_meters": 22.86,
+        "surface": "dirt",
+        "state": "CO",
+        "park": "Rocky Mountain National Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1002,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-105.7, 40.3], [-105.6, 40.4], [-105.5, 40.5]]
+      },
+      "properties": {
+        "name": "Rocky Mountain NP - Emerald Lake Trail",
+        "difficulty": "Moderate",
+        "length_miles": 1.8,
+        "length_meters": 2896.83,
+        "elevation_gain_feet": 425,
+        "elevation_gain_meters": 129.54,
+        "surface": "dirt",
+        "state": "CO",
+        "park": "Rocky Mountain National Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1003,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-105.9, 40.2], [-105.8, 40.3], [-105.7, 40.4]]
+      },
+      "properties": {
+        "name": "Rocky Mountain NP - Sky Pond Trail",
+        "difficulty": "Strenuous",
+        "length_miles": 9.3,
+        "length_meters": 14963.69,
+        "elevation_gain_feet": 2100,
+        "elevation_gain_meters": 640.08,
+        "surface": "dirt",
+        "state": "CO",
+        "park": "Rocky Mountain National Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1010,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-106.5, 39.0], [-106.4, 39.1], [-106.3, 39.2]]
+      },
+      "properties": {
+        "name": "Telluride NF - Sneffels Highline Trail",
+        "difficulty": "Moderate",
+        "length_miles": 7.2,
+        "length_meters": 11587.76,
+        "elevation_gain_feet": 1650,
+        "elevation_gain_meters": 502.92,
+        "surface": "dirt",
+        "state": "CO",
+        "park": "Uncompahgre National Forest"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1011,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-105.5, 38.9], [-105.4, 39.0], [-105.3, 39.1]]
+      },
+      "properties": {
+        "name": "Great Sand Dunes NP - Medano Pass Primitive Road",
+        "difficulty": "Easy",
+        "length_miles": 7.4,
+        "length_meters": 11909.63,
+        "elevation_gain_feet": 500,
+        "elevation_gain_meters": 152.40,
+        "surface": "sand",
+        "state": "CO",
+        "park": "Great Sand Dunes National Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1012,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-104.9, 38.4], [-104.8, 38.5], [-104.7, 38.6]]
+      },
+      "properties": {
+        "name": "Wet Mountain Valley - Rito Alto Peak Trail",
+        "difficulty": "Strenuous",
+        "length_miles": 5.1,
+        "length_meters": 8204.84,
+        "elevation_gain_feet": 2400,
+        "elevation_gain_meters": 731.52,
+        "surface": "dirt",
+        "state": "CO",
+        "park": "San Isabel National Forest"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2001,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-119.5353, 37.7664], [-119.5250, 37.7750], [-119.5100, 37.7850]]
+      },
+      "properties": {
+        "name": "Yosemite NP - Mist Trail",
+        "difficulty": "Moderate",
+        "length_miles": 5.5,
+        "length_meters": 8850.63,
+        "elevation_gain_feet": 1000,
+        "elevation_gain_meters": 304.80,
+        "surface": "dirt",
+        "state": "CA",
+        "park": "Yosemite National Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2002,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-119.6, 37.7200], [-119.5, 37.7300], [-119.4, 37.7400]]
+      },
+      "properties": {
+        "name": "Yosemite NP - Four Mile Trail",
+        "difficulty": "Strenuous",
+        "length_miles": 9.6,
+        "length_meters": 15449.62,
+        "elevation_gain_feet": 3200,
+        "elevation_gain_meters": 975.36,
+        "surface": "dirt",
+        "state": "CA",
+        "park": "Yosemite National Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2003,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-119.3, 37.6], [-119.2, 37.7], [-119.1, 37.8]]
+      },
+      "properties": {
+        "name": "Yosemite NP - Valley Loop Trail",
+        "difficulty": "Easy",
+        "length_miles": 7.2,
+        "length_meters": 11587.76,
+        "elevation_gain_feet": 200,
+        "elevation_gain_meters": 60.96,
+        "surface": "asphalt",
+        "state": "CA",
+        "park": "Yosemite National Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2010,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-118.8, 37.6], [-118.7, 37.7], [-118.6, 37.8]]
+      },
+      "properties": {
+        "name": "Sequoia NP - Moro Rock Trail",
+        "difficulty": "Moderate",
+        "length_miles": 1.8,
+        "length_meters": 2896.83,
+        "elevation_gain_feet": 600,
+        "elevation_gain_meters": 182.88,
+        "surface": "concrete",
+        "state": "CA",
+        "park": "Sequoia National Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2011,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-118.7, 36.8], [-118.6, 36.9], [-118.5, 37.0]]
+      },
+      "properties": {
+        "name": "Joshua Tree NP - Hidden Valley Loop",
+        "difficulty": "Easy",
+        "length_miles": 1.3,
+        "length_meters": 2092.27,
+        "elevation_gain_feet": 130,
+        "elevation_gain_meters": 39.62,
+        "surface": "dirt",
+        "state": "CA",
+        "park": "Joshua Tree National Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2012,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-118.4, 36.7], [-118.3, 36.8], [-118.2, 36.9]]
+      },
+      "properties": {
+        "name": "Joshua Tree NP - Barker Dam Loop",
+        "difficulty": "Easy",
+        "length_miles": 1.4,
+        "length_meters": 2253.11,
+        "elevation_gain_feet": 100,
+        "elevation_gain_meters": 30.48,
+        "surface": "dirt",
+        "state": "CA",
+        "park": "Joshua Tree National Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2020,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-120.4, 39.3], [-120.3, 39.4], [-120.2, 39.5]]
+      },
+      "properties": {
+        "name": "Lake Tahoe NF - Emerald Bay State Park Trail",
+        "difficulty": "Moderate",
+        "length_miles": 5.0,
+        "length_meters": 8046.72,
+        "elevation_gain_feet": 1300,
+        "elevation_gain_meters": 396.24,
+        "surface": "dirt",
+        "state": "CA",
+        "park": "Lake Tahoe National Forest"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2030,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-121.5, 41.3], [-121.4, 41.4], [-121.3, 41.5]]
+      },
+      "properties": {
+        "name": "Lassen Volcanic NP - Lassen Peak Trail",
+        "difficulty": "Strenuous",
+        "length_miles": 5.0,
+        "length_meters": 8046.72,
+        "elevation_gain_feet": 2000,
+        "elevation_gain_meters": 609.60,
+        "surface": "dirt",
+        "state": "CA",
+        "park": "Lassen Volcanic National Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3001,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-121.7, 48.0], [-121.6, 48.1], [-121.5, 48.2]]
+      },
+      "properties": {
+        "name": "Mount Rainier NP - Skyline Loop Trail",
+        "difficulty": "Strenuous",
+        "length_miles": 9.4,
+        "length_meters": 15130.92,
+        "elevation_gain_feet": 1700,
+        "elevation_gain_meters": 518.16,
+        "surface": "dirt",
+        "state": "WA",
+        "park": "Mount Rainier National Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3002,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-122.0, 47.7], [-121.9, 47.8], [-121.8, 47.9]]
+      },
+      "properties": {
+        "name": "North Cascades NP - Cascade Pass Trail",
+        "difficulty": "Moderate",
+        "length_miles": 7.7,
+        "length_meters": 12389.78,
+        "elevation_gain_feet": 1800,
+        "elevation_gain_meters": 548.64,
+        "surface": "dirt",
+        "state": "WA",
+        "park": "North Cascades National Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3003,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-122.3, 47.5], [-122.2, 47.6], [-122.1, 47.7]]
+      },
+      "properties": {
+        "name": "Olympic NP - Hoh Rain Forest Loop",
+        "difficulty": "Easy",
+        "length_miles": 3.0,
+        "length_meters": 4828.03,
+        "elevation_gain_feet": 100,
+        "elevation_gain_meters": 30.48,
+        "surface": "dirt",
+        "state": "WA",
+        "park": "Olympic National Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3010,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-122.4, 46.8], [-122.3, 46.9], [-122.2, 47.0]]
+      },
+      "properties": {
+        "name": "Mount Hood NF - Lost Lake Loop",
+        "difficulty": "Easy",
+        "length_miles": 2.8,
+        "length_meters": 4506.77,
+        "elevation_gain_feet": 200,
+        "elevation_gain_meters": 60.96,
+        "surface": "dirt",
+        "state": "OR",
+        "park": "Mount Hood National Forest"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3011,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-121.8, 44.2], [-121.7, 44.3], [-121.6, 44.4]]
+      },
+      "properties": {
+        "name": "Crater Lake NP - Rim Loop Trail",
+        "difficulty": "Moderate",
+        "length_miles": 33.0,
+        "length_meters": 53109.34,
+        "elevation_gain_feet": 2000,
+        "elevation_gain_meters": 609.60,
+        "surface": "dirt",
+        "state": "OR",
+        "park": "Crater Lake National Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3012,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-122.7, 43.8], [-122.6, 43.9], [-122.5, 44.0]]
+      },
+      "properties": {
+        "name": "Rogue River NF - Rogue Gorge Trail",
+        "difficulty": "Easy",
+        "length_miles": 1.2,
+        "length_meters": 1931.21,
+        "elevation_gain_feet": 150,
+        "elevation_gain_meters": 45.72,
+        "surface": "dirt",
+        "state": "OR",
+        "park": "Rogue River-Siskiyou National Forest"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4001,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-111.3, 40.7], [-111.2, 40.8], [-111.1, 40.9]]
+      },
+      "properties": {
+        "name": "Zion NP - Angels Landing",
+        "difficulty": "Moderate",
+        "length_miles": 5.4,
+        "length_meters": 8690.42,
+        "elevation_gain_feet": 1488,
+        "elevation_gain_meters": 453.64,
+        "surface": "dirt",
+        "state": "UT",
+        "park": "Zion National Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4002,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-111.5, 40.8], [-111.4, 40.9], [-111.3, 41.0]]
+      },
+      "properties": {
+        "name": "Zion NP - The Narrows",
+        "difficulty": "Strenuous",
+        "length_miles": 9.4,
+        "length_meters": 15130.92,
+        "elevation_gain_feet": 1000,
+        "elevation_gain_meters": 304.80,
+        "surface": "rocky",
+        "state": "UT",
+        "park": "Zion National Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4003,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-112.0, 40.2], [-111.9, 40.3], [-111.8, 40.4]]
+      },
+      "properties": {
+        "name": "Bryce Canyon NP - Navajo/Queens Garden Loop",
+        "difficulty": "Moderate",
+        "length_miles": 2.9,
+        "length_meters": 4667.54,
+        "elevation_gain_feet": 550,
+        "elevation_gain_meters": 167.64,
+        "surface": "dirt",
+        "state": "UT",
+        "park": "Bryce Canyon National Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4010,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-110.8, 38.3], [-110.7, 38.4], [-110.6, 38.5]]
+      },
+      "properties": {
+        "name": "Arches NP - Devils Garden Loop",
+        "difficulty": "Moderate",
+        "length_miles": 7.2,
+        "length_meters": 11587.76,
+        "elevation_gain_feet": 400,
+        "elevation_gain_meters": 121.92,
+        "surface": "dirt",
+        "state": "UT",
+        "park": "Arches National Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4011,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-109.3, 37.9], [-109.2, 38.0], [-109.1, 38.1]]
+      },
+      "properties": {
+        "name": "Canyonlands NP - Grand View Trail",
+        "difficulty": "Easy",
+        "length_miles": 2.0,
+        "length_meters": 3218.69,
+        "elevation_gain_feet": 200,
+        "elevation_gain_meters": 60.96,
+        "surface": "dirt",
+        "state": "UT",
+        "park": "Canyonlands National Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5001,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-112.1, 36.3], [-112.0, 36.4], [-111.9, 36.5]]
+      },
+      "properties": {
+        "name": "Grand Canyon NP - Bright Angel Trail",
+        "difficulty": "Strenuous",
+        "length_miles": 9.3,
+        "length_meters": 14963.69,
+        "elevation_gain_feet": 3060,
+        "elevation_gain_meters": 932.66,
+        "surface": "dirt",
+        "state": "AZ",
+        "park": "Grand Canyon National Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5002,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-112.2, 36.2], [-112.1, 36.3], [-112.0, 36.4]]
+      },
+      "properties": {
+        "name": "Grand Canyon NP - South Rim Trail",
+        "difficulty": "Easy",
+        "length_miles": 13.0,
+        "length_meters": 20921.31,
+        "elevation_gain_feet": 200,
+        "elevation_gain_meters": 60.96,
+        "surface": "asphalt",
+        "state": "AZ",
+        "park": "Grand Canyon National Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5010,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-111.5, 34.8], [-111.4, 34.9], [-111.3, 35.0]]
+      },
+      "properties": {
+        "name": "Sedona NF - Cathedral Rock Trail",
+        "difficulty": "Moderate",
+        "length_miles": 1.2,
+        "length_meters": 1931.21,
+        "elevation_gain_feet": 400,
+        "elevation_gain_meters": 121.92,
+        "surface": "rocky",
+        "state": "AZ",
+        "park": "Coconino National Forest"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5011,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-113.6, 34.5], [-113.5, 34.6], [-113.4, 34.7]]
+      },
+      "properties": {
+        "name": "Joshua Tree NP - Barker Dam Extended Loop",
+        "difficulty": "Moderate",
+        "length_miles": 2.3,
+        "length_meters": 3701.73,
+        "elevation_gain_feet": 200,
+        "elevation_gain_meters": 60.96,
+        "surface": "dirt",
+        "state": "AZ",
+        "park": "Arizona National Forests"
+      }
+    }
+  ],
+  "metadata": {
+    "total_trails": 35,
+    "created": "2025-04-25T00:00:00Z",
+    "source": "National Parks and National Forests",
+    "states": ["CO", "CA", "WA", "OR", "UT", "AZ"],
+    "description": "Comprehensive US national parks and national forests trail dataset"
+  }
+}
