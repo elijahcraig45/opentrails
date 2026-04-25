@@ -98,7 +98,7 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ onSignUpPress }) => {
 
       <View style={styles.footer}>
         <Text style={styles.footerText}>
-          Continue to explore trails while logged out
+          Sign up or log in to discover and save your favorite trails
         </Text>
       </View>
     </View>
