@@ -31,6 +31,12 @@ jobs:
     - name: Type check frontend
       run: cd app && npm exec tsc --noEmit
     
+    - name: Start API server
+      run: cd api && npm start &
+    
+    - name: Wait for API server
+      run: sleep 5 && curl -s http://localhost:3001/api/health || echo "API not ready yet"
+    
     - name: Run E2E tests
       run: cd app && npm exec playwright install && npm exec playwright test
     
