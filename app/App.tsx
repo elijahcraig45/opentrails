@@ -7,11 +7,11 @@ import { AuthProvider, useAuth } from './src/context/AuthContext';
 
 const isWeb = Platform.OS === 'web';
 
-// In production (Vercel), use same origin API
-// In development (localhost), use local API on port 3001
+// In development (localhost), use the local API
+// In production, use the cloud API
 const API_BASE_URL = typeof window !== 'undefined' && window.location.hostname === 'localhost'
   ? 'http://localhost:3001/api'
-  : '/api'; // Use relative URL on Vercel (same origin)
+  : 'https://opentrails-api-542596148138.us-central1.run.app/api';
 
 type ViewMode = 'list' | 'map';
 

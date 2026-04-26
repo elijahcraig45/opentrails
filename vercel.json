@@ -7,24 +7,9 @@
       "config": {
         "externalDirs": ["app"]
       }
-    },
-    {
-      "src": "api/package.json",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "api/index.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "app/App.tsx"
     }
   ],
   "env": {
-    "NODE_ENV": "production",
-    "REACT_APP_API_URL": "https://opentrails.vercel.app/api"
+    "REACT_APP_API_URL": "https://opentrails-api-542596148138.us-central1.run.app/api"
   }
 }
