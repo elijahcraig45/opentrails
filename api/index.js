@@ -7,7 +7,33 @@ const { setupSyncEndpoint } = require('./hiking-project-sync');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors());
+// Configure CORS
+const corsOptions = {
+  origin: (origin, callback) => {
+    const allowedOrigins = [
+      'http://localhost:3000',
+      'http://localhost:8081',
+      'http://localhost:8083',
+      'https://opentrails.vercel.app',
+      'https://www.opentrails.app',
+      process.env.CORS_ORIGIN
+    ].filter(Boolean);
+
+    // Allow requests with no origin (like mobile or curl requests)
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      console.warn(`CORS rejected origin: ${origin}`);
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  maxAge: 86400 // 24 hours
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Initialize database on startup
@@ -28,6 +54,27 @@ let isDbReady = false;
 
 // Setup Hiking Project sync endpoints
 setupSyncEndpoint(app);
+
+// Health check endpoint (for monitoring and preflight test)
+app.get('/api/health', (req, res) => {
+  res.json({
+    status: 'healthy',
+    timestamp: new Date().toISOString(),
+    database: isDbReady ? 'ready' : 'initializing',
+    environment: process.env.NODE_ENV || 'development'
+  });
+});
+
+// Root endpoint for basic info
+app.get('/', (req, res) => {
+  res.json({
+    name: 'OpenTrails API',
+    version: '1.0.0',
+    status: 'running',
+    endpoints: ['/api/health', '/api/trails', '/api/trails/nearby'],
+    cors: 'enabled'
+  });
+});
 
 // Endpoint: Get trails nearby (spatial search)
 app.get('/api/trails/nearby', (req, res) => {

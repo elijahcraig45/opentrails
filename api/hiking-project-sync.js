@@ -8,7 +8,10 @@
  * - Support for nightly sync jobs
  */
 
-const fetch = require('node-fetch');
+// Use native fetch in Node.js 18+, fall back to node-fetch for older versions
+const fetch = typeof globalThis.fetch !== 'undefined' 
+  ? globalThis.fetch 
+  : require('node-fetch');
 const { db } = require('./db');
 
 // Configuration
