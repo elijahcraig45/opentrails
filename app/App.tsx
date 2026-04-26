@@ -73,16 +73,46 @@ function MainApp() {
           params.append('search', searchQuery);
         }
 
-        const response = await fetch(`${API_BASE_URL}/trails?${params}`);
-        if (!response.ok) throw new Error('Failed to fetch trails');
+        const url = `${API_BASE_URL}/trails?${params}`;
+        console.log('Fetching trails from:', url);
         
-        const data: GeoJSONFeatureCollection = await response.json();
+        const response = await fetch(url);
+        console.log('API response status:', response.status);
+        
+        if (!response.ok) {
+          throw new Error(`API error: ${response.status} ${response.statusText}`);
+        }
+        
+        const data = await response.json();
+        console.log('API returned', Array.isArray(data) ? data.length : data.features?.length || 0, 'trails');
+        
+        // API returns array of trail objects directly, convert to GeoJSON format
+        const features = Array.isArray(data) 
+          ? data 
+          : (data.features || []);
+        
+        // If API returned empty or invalid data, fall back to static
+        if (!features || features.length === 0) {
+          console.warn('API returned no trails, falling back to static data');
+          setUseAPI(false);
+          return;
+        }
+        
         setApiData({
           type: 'FeatureCollection',
           name: 'Trails',
-          features: (data.features || []).map((f: any, idx: number) => ({
-            ...f,
+          features: features.map((f: any, idx: number) => ({
+            type: 'Feature',
             id: f.id || idx,
+            geometry: f.geometry,
+            properties: f.properties || {
+              name: f.name,
+              difficulty: f.difficulty,
+              length_meters: f.length_meters,
+              estimated_difficulty: f.estimated_difficulty,
+              state: f.state,
+              ...f
+            },
           })),
         });
       } catch (err) {
