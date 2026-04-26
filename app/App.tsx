@@ -17,7 +17,7 @@ type ViewMode = 'list' | 'map';
 
 // Main app content (requires auth)
 function MainApp() {
-  // Load from static GeoJSON as fallback
+  // Load from static GeoJSON as fallback (small dataset for dev/emergency only)
   const fallbackGeojsonData = require('./assets/boulder_trails.geojson');
   
   const [searchQuery, setSearchQuery] = useState('');
@@ -61,64 +61,91 @@ function MainApp() {
 
     const fetchTrails = async () => {
       setLoading(true);
-      try {
-        const params = new URLSearchParams();
-        if (selectedDifficulty && selectedDifficulty !== 'All') {
-          params.append('difficulty', selectedDifficulty);
-        }
-        if (selectedState) {
-          params.append('state', selectedState);
-        }
-        if (searchQuery) {
-          params.append('search', searchQuery);
-        }
+      let lastError: Error | null = null;
+      
+      // Retry up to 3 times with exponential backoff
+      for (let attempt = 1; attempt <= 3; attempt++) {
+        try {
+          const params = new URLSearchParams();
+          if (selectedDifficulty && selectedDifficulty !== 'All') {
+            params.append('difficulty', selectedDifficulty);
+          }
+          if (selectedState) {
+            params.append('state', selectedState);
+          }
+          if (searchQuery) {
+            params.append('search', searchQuery);
+          }
 
-        const url = `${API_BASE_URL}/trails?${params}`;
-        console.log('Fetching trails from:', url);
-        
-        const response = await fetch(url);
-        console.log('API response status:', response.status);
-        
-        if (!response.ok) {
-          throw new Error(`API error: ${response.status} ${response.statusText}`);
+          const url = `${API_BASE_URL}/trails?${params}`;
+          console.log(`[Attempt ${attempt}/3] Fetching trails from: ${url}`);
+          
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 second timeout
+          
+          const response = await fetch(url, { signal: controller.signal });
+          clearTimeout(timeoutId);
+          
+          console.log('API response status:', response.status);
+          
+          if (!response.ok) {
+            throw new Error(`API error: ${response.status} ${response.statusText}`);
+          }
+          
+          const data = await response.json();
+          console.log('API returned', Array.isArray(data) ? data.length : data.features?.length || 0, 'trails');
+          
+          // API returns array of trail objects directly, convert to GeoJSON format
+          const features = Array.isArray(data) 
+            ? data 
+            : (data.features || []);
+          
+          // If API returned empty or invalid data, continue to next attempt or fallback
+          if (!features || features.length === 0) {
+            console.warn('API returned no trails');
+            lastError = new Error('API returned no trails');
+            continue; // Try again
+          }
+          
+          setApiData({
+            type: 'FeatureCollection',
+            name: 'Trails',
+            features: features.map((f: any, idx: number) => ({
+              type: 'Feature',
+              id: f.id || idx,
+              geometry: f.geometry,
+              properties: f.properties || {
+                name: f.name,
+                difficulty: f.difficulty,
+                length_meters: f.length_meters,
+                estimated_difficulty: f.estimated_difficulty,
+                state: f.state,
+                ...f
+              },
+            })),
+          });
+          
+          console.log('Successfully loaded trails from API');
+          setLoading(false);
+          return; // Success!
+          
+        } catch (err) {
+          const error = err instanceof Error ? err : new Error(String(err));
+          lastError = error;
+          console.warn(`Attempt ${attempt} failed: ${error.message}`);
+          
+          if (attempt < 3) {
+            // Exponential backoff: 1s, 2s, 4s
+            const backoffMs = Math.pow(2, attempt - 1) * 1000;
+            console.log(`Retrying in ${backoffMs}ms...`);
+            await new Promise(resolve => setTimeout(resolve, backoffMs));
+          }
         }
-        
-        const data = await response.json();
-        console.log('API returned', Array.isArray(data) ? data.length : data.features?.length || 0, 'trails');
-        
-        // API returns array of trail objects directly, convert to GeoJSON format
-        const features = Array.isArray(data) 
-          ? data 
-          : (data.features || []);
-        
-        // If API returned empty or invalid data, fall back to static
-        if (!features || features.length === 0) {
-          console.warn('API returned no trails, falling back to static data');
-          setUseAPI(false);
-          return;
-        }
-        
-        setApiData({
-          type: 'FeatureCollection',
-          name: 'Trails',
-          features: features.map((f: any, idx: number) => ({
-            type: 'Feature',
-            id: f.id || idx,
-            geometry: f.geometry,
-            properties: f.properties || {
-              name: f.name,
-              difficulty: f.difficulty,
-              length_meters: f.length_meters,
-              estimated_difficulty: f.estimated_difficulty,
-              state: f.state,
-              ...f
-            },
-          })),
-        });
-      } catch (err) {
-        console.error('API fetch failed, falling back to static data:', err);
-        setUseAPI(false);
       }
+      
+      // All retries failed, fall back to static data
+      console.error('All API attempts failed, falling back to static data:', lastError);
+      setUseAPI(false);
       setLoading(false);
     };
 
