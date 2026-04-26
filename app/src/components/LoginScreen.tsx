@@ -1,104 +1,88 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, ActivityIndicator } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, ActivityIndicator } from 'react-native';
 import { useAuth } from '../context/AuthContext';
 
 interface LoginScreenProps {
-  onSignUpPress: () => void;
+  onSuccess?: () => void;
 }
 
-export const LoginScreen: React.FC<LoginScreenProps> = ({ onSignUpPress }) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [showPassword, setShowPassword] = useState(false);
-  const { signIn, error, loading, clearError } = useAuth();
+export const LoginScreen: React.FC<LoginScreenProps> = ({ onSuccess }) => {
+  const { signInWithGoogle, browseAsGuest, error, loading, clearError } = useAuth();
+  const [authError, setAuthError] = useState<string | null>(null);
 
-  const handleLogin = async () => {
-    if (!email || !password) {
-      return;
-    }
+  const handleGoogleSignIn = async () => {
     try {
-      await signIn(email, password);
+      setAuthError(null);
+      clearError();
+      await signInWithGoogle();
+      onSuccess?.();
     } catch (err) {
-      console.error('Login error:', err);
+      setAuthError('Failed to sign in with Google. Please try again.');
+      console.error('Google sign-in error:', err);
     }
+  };
+
+  const handleGuestBrowse = () => {
+    setAuthError(null);
+    clearError();
+    browseAsGuest();
+    onSuccess?.();
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>OpenTrails</Text>
+      <Text style={styles.title}>🥾 OpenTrails</Text>
       <Text style={styles.subtitle}>Discover & Track Your Hikes</Text>
 
-      <View style={styles.form}>
-        <Text style={styles.label}>Email Address</Text>
-        <TextInput
-          style={styles.input}
-          placeholder="you@example.com"
-          placeholderTextColor="#999"
-          value={email}
-          onChangeText={(text) => {
-            setEmail(text);
-            clearError();
-          }}
-          editable={!loading}
-          autoCapitalize="none"
-          keyboardType="email-address"
-        />
+      <View style={styles.content}>
+        <Text style={styles.description}>
+          Explore thousands of trails across the US. Sign in to save your favorites and track activities.
+        </Text>
 
-        <Text style={styles.label}>Password</Text>
-        <View style={styles.passwordInput}>
-          <TextInput
-            style={styles.passwordField}
-            placeholder="Enter your password"
-            placeholderTextColor="#999"
-            value={password}
-            onChangeText={(text) => {
-              setPassword(text);
-              clearError();
-            }}
-            editable={!loading}
-            secureTextEntry={!showPassword}
-          />
-          <TouchableOpacity
-            onPress={() => setShowPassword(!showPassword)}
-            disabled={!password}
-          >
-            <Text style={styles.togglePassword}>
-              {showPassword ? '👁️' : '🔒'}
-            </Text>
-          </TouchableOpacity>
-        </View>
-
-        {error && (
-          <Text style={styles.error}>{error}</Text>
+        {/* Error message */}
+        {(authError || error) && (
+          <View style={styles.errorContainer}>
+            <Text style={styles.error}>{authError || error}</Text>
+          </View>
         )}
 
+        {/* Google Sign In Button */}
         <TouchableOpacity
-          style={[styles.button, loading && styles.buttonDisabled]}
-          onPress={handleLogin}
-          disabled={loading || !email || !password}
+          style={[styles.googleButton, loading && styles.buttonDisabled]}
+          onPress={handleGoogleSignIn}
+          disabled={loading}
         >
           {loading ? (
-            <ActivityIndicator color="#fff" />
+            <ActivityIndicator color="#1f2937" />
           ) : (
-            <Text style={styles.buttonText}>Sign In</Text>
+            <Text style={styles.googleButtonText}>🔐 Sign In with Google</Text>
           )}
         </TouchableOpacity>
 
-        <View style={styles.divider} />
+        <View style={styles.divider}>
+          <View style={styles.dividerLine} />
+          <Text style={styles.dividerText}>or</Text>
+          <View style={styles.dividerLine} />
+        </View>
 
+        {/* Browse as Guest Button */}
         <TouchableOpacity
-          onPress={onSignUpPress}
+          style={[styles.guestButton, loading && styles.buttonDisabled]}
+          onPress={handleGuestBrowse}
           disabled={loading}
         >
-          <Text style={styles.signUpLink}>
-            Don't have an account? <Text style={styles.signUpBold}>Sign Up</Text>
-          </Text>
+          <Text style={styles.guestButtonText}>Browse as Guest</Text>
         </TouchableOpacity>
+
+        <Text style={styles.guestNote}>
+          Browse and search trails without an account. Sign in anytime to save favorites.
+        </Text>
       </View>
 
       <View style={styles.footer}>
         <Text style={styles.footerText}>
-          Sign up or log in to discover and save your favorite trails
+          Open source • MIT License • {'\n'}
+          Made with ❤️ for hikers everywhere
         </Text>
       </View>
     </View>
@@ -109,104 +93,110 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    paddingHorizontal: 20,
-    justifyContent: 'center',
+    justifyContent: 'space-between',
+    paddingVertical: 20,
   },
   title: {
     fontSize: 32,
     fontWeight: 'bold',
     color: '#1f2937',
-    marginBottom: 8,
     textAlign: 'center',
+    marginTop: 20,
   },
   subtitle: {
-    fontSize: 16,
+    fontSize: 18,
     color: '#6b7280',
+    textAlign: 'center',
+    marginTop: 8,
     marginBottom: 40,
+  },
+  content: {
+    flex: 1,
+    paddingHorizontal: 24,
+    justifyContent: 'center',
+  },
+  description: {
+    fontSize: 16,
+    color: '#4b5563',
+    lineHeight: 24,
+    marginBottom: 32,
     textAlign: 'center',
   },
-  form: {
-    marginBottom: 40,
-  },
-  label: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#1f2937',
-    marginBottom: 8,
-    marginTop: 16,
-  },
-  input: {
-    borderWidth: 1,
-    borderColor: '#e5e7eb',
+  errorContainer: {
+    backgroundColor: '#fee2e2',
     borderRadius: 8,
-    paddingHorizontal: 12,
-    paddingVertical: 10,
-    fontSize: 14,
-    backgroundColor: '#f9fafb',
-  },
-  passwordInput: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    borderWidth: 1,
-    borderColor: '#e5e7eb',
-    borderRadius: 8,
-    backgroundColor: '#f9fafb',
-    paddingHorizontal: 12,
-  },
-  passwordField: {
-    flex: 1,
-    paddingVertical: 10,
-    fontSize: 14,
-  },
-  togglePassword: {
-    fontSize: 18,
-    padding: 4,
+    padding: 12,
+    marginBottom: 24,
+    borderLeftWidth: 4,
+    borderLeftColor: '#dc2626',
   },
   error: {
-    color: '#ef4444',
-    fontSize: 12,
-    marginTop: 8,
+    color: '#991b1b',
+    fontSize: 14,
     fontWeight: '500',
   },
-  button: {
-    backgroundColor: '#3b82f6',
+  googleButton: {
+    backgroundColor: '#fff',
+    borderWidth: 1.5,
+    borderColor: '#d1d5db',
     borderRadius: 8,
-    paddingVertical: 12,
-    marginTop: 24,
-    justifyContent: 'center',
+    paddingVertical: 16,
+    paddingHorizontal: 20,
+    marginBottom: 16,
     alignItems: 'center',
+    justifyContent: 'center',
   },
-  buttonDisabled: {
-    backgroundColor: '#d1d5db',
-  },
-  buttonText: {
-    color: '#fff',
+  googleButtonText: {
     fontSize: 16,
     fontWeight: '600',
+    color: '#1f2937',
   },
   divider: {
-    height: 1,
-    backgroundColor: '#e5e7eb',
+    flexDirection: 'row',
+    alignItems: 'center',
     marginVertical: 24,
   },
-  signUpLink: {
+  dividerLine: {
+    flex: 1,
+    height: 1,
+    backgroundColor: '#e5e7eb',
+  },
+  dividerText: {
+    marginHorizontal: 12,
+    color: '#9ca3af',
     fontSize: 14,
+  },
+  guestButton: {
+    backgroundColor: '#10b981',
+    borderRadius: 8,
+    paddingVertical: 16,
+    paddingHorizontal: 20,
+    marginBottom: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  guestButtonText: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#fff',
+  },
+  guestNote: {
+    fontSize: 13,
     color: '#6b7280',
     textAlign: 'center',
+    lineHeight: 20,
   },
-  signUpBold: {
-    fontWeight: '600',
-    color: '#3b82f6',
+  buttonDisabled: {
+    opacity: 0.6,
   },
   footer: {
-    position: 'absolute',
-    bottom: 20,
-    left: 20,
-    right: 20,
+    paddingHorizontal: 24,
+    paddingBottom: 16,
   },
   footerText: {
     fontSize: 12,
     color: '#9ca3af',
     textAlign: 'center',
+    lineHeight: 18,
   },
 });

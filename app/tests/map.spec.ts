@@ -58,21 +58,28 @@ test.describe('OpenTrails API & Deployment', () => {
   test('App loads with login screen on first visit', async ({ page }) => {
     await page.goto('/');
     
-    // Should show the login screen
+    // Should show the login/guest screen
     await expect(page.getByText('OpenTrails')).toBeVisible({ timeout: 10000 });
     await expect(page.getByText('Discover & Track Your Hikes')).toBeVisible();
-    await expect(page.getByText('Sign In')).toBeVisible();
+    await expect(page.getByText('Sign In with Google')).toBeVisible();
   });
 
   test('Search input exists on login screen', async ({ page }) => {
     await page.goto('/');
     
-    // Login screen has email and password inputs
-    const emailInput = page.locator('input[placeholder="you@example.com"]');
-    const passwordInput = page.locator('input[placeholder="Enter your password"]');
+    // Login screen has browse as guest and sign in options
+    await expect(page.getByText('Browse as Guest')).toBeVisible({ timeout: 10000 });
+    await expect(page.getByText('Sign In with Google')).toBeVisible();
+  });
+
+  test('Guest can browse trails without signing in', async ({ page }) => {
+    await page.goto('/');
     
-    await expect(emailInput).toBeVisible({ timeout: 10000 });
-    await expect(passwordInput).toBeVisible();
+    // Click "Browse as Guest" button
+    await page.getByText('Browse as Guest').click();
+    
+    // Should load the main app with trails - check for guest badge
+    await expect(page.getByText('Guest')).toBeVisible({ timeout: 10000 });
   });
 
   test('API deployment is in Cloud Run', async ({ page }) => {

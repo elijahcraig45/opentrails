@@ -8,9 +8,7 @@ export { TrailDetailPage } from './TrailDetailPage';
 
 // Authentication components (currently in use)
 export { LoginScreen } from './LoginScreen';
-export { SignUpScreen } from './SignUpScreen';
 export { UserProfileScreen } from './UserProfileScreen';
-export { PasswordResetScreen } from './PasswordResetScreen';
 
 // Activity tracking (Phase 3.2, currently in use)
 export { ActivityForm } from './ActivityForm';

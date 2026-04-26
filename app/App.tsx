@@ -1,6 +1,6 @@
 import { Platform, StyleSheet, Text, View, ActivityIndicator, ScrollView, TouchableOpacity } from 'react-native';
 import React, { useState, useMemo, useEffect } from 'react';
-import { SearchBar, FilterButtons, StateFilter, ActivityForm, TrailCard, TrailListView, TrailDetailPage, LoginScreen, SignUpScreen, UserProfileScreen } from './src/components';
+import { SearchBar, FilterButtons, StateFilter, ActivityForm, TrailCard, TrailListView, TrailDetailPage, LoginScreen, UserProfileScreen } from './src/components';
 import { TrailFeature, GeoJSONFeatureCollection } from './src/types';
 import { AuthProvider, useAuth } from './src/context/AuthContext';
 
@@ -242,8 +242,8 @@ function MainApp() {
 
 // Auth wrapper component that handles login/signup flow
 function AuthenticationFlow() {
-  const { user, loading } = useAuth();
-  const [screen, setScreen] = useState<'login' | 'signup' | 'app' | 'profile'>('login');
+  const { user, guestUser, isAuthenticated, loading } = useAuth();
+  const [screen, setScreen] = useState<'login' | 'app' | 'profile'>('login');
 
   if (loading) {
     return (
@@ -254,19 +254,13 @@ function AuthenticationFlow() {
     );
   }
 
-  if (!user) {
-    return screen === 'login' ? (
-      <LoginScreen 
-        onSignUpPress={() => setScreen('signup')}
-      />
-    ) : (
-      <SignUpScreen 
-        onLoginPress={() => setScreen('login')}
-      />
-    );
+  // Show login if neither authenticated nor guest
+  if (!isAuthenticated) {
+    return <LoginScreen onSuccess={() => setScreen('app')} />;
   }
 
-  if (screen === 'profile') {
+  // Show profile screen if user is logged in and profile screen is active
+  if (screen === 'profile' && user) {
     return (
       <UserProfileScreen 
         onActivityPress={() => setScreen('app')}
@@ -275,17 +269,22 @@ function AuthenticationFlow() {
     );
   }
 
+  // Show app content (authenticated user or guest)
   return (
     <View style={styles.appWrapper}>
-      {/* Profile button in top right */}
+      {/* Header bar with title and profile/logout button */}
       <View style={styles.topBar}>
         <Text style={styles.appTitle}>🥾 OpenTrails</Text>
-        <Text 
-          style={styles.profileButton}
-          onPress={() => setScreen('profile')}
-        >
-          👤 {user.displayName || user.email?.split('@')[0] || 'Profile'}
-        </Text>
+        {user ? (
+          <Text 
+            style={styles.profileButton}
+            onPress={() => setScreen('profile')}
+          >
+            👤 {user.displayName || user.email?.split('@')[0] || 'Profile'}
+          </Text>
+        ) : guestUser ? (
+          <Text style={styles.guestBadge}>👥 Guest</Text>
+        ) : null}
       </View>
       <MainApp />
     </View>
@@ -336,6 +335,15 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#3b82f6',
     fontWeight: '500',
+  },
+  guestBadge: {
+    fontSize: 12,
+    color: '#fff',
+    fontWeight: '600',
+    backgroundColor: '#10b981',
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 12,
   },
   container: {
     flex: 1,

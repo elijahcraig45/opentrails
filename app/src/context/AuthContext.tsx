@@ -1,28 +1,61 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { User, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import { User, onAuthStateChanged, signOut, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { auth } from '../config/firebase';
+
+interface GuestUser {
+  isGuest: true;
+  id: string;
+  requestCount: number;
+  lastRequestTime: number;
+}
 
 interface AuthContextType {
   user: User | null;
+  guestUser: GuestUser | null;
+  isAuthenticated: boolean; // true if either signed in or guest
   loading: boolean;
   error: string | null;
-  signUp: (email: string, password: string, displayName: string) => Promise<User>;
-  signIn: (email: string, password: string) => Promise<User>;
+  signInWithGoogle: () => Promise<User>;
   logout: () => Promise<void>;
   clearError: () => void;
+  browseAsGuest: () => void;
+  isGuest: () => boolean;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
+const GUEST_ID_KEY = 'opentrails_guest_id';
+const RATE_LIMIT_KEY = 'opentrails_rate_limit';
+const MAX_GUEST_REQUESTS_PER_HOUR = 100; // Reasonable limit for guest browsing
+
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
+  const [guestUser, setGuestUser] = useState<GuestUser | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  // Initialize guest mode from localStorage
   useEffect(() => {
-    // Set up auth state listener
+    const initGuest = () => {
+      const storedGuestId = localStorage.getItem(GUEST_ID_KEY);
+      if (storedGuestId) {
+        setGuestUser({
+          isGuest: true,
+          id: storedGuestId,
+          requestCount: 0,
+          lastRequestTime: Date.now(),
+        });
+      }
+    };
+
+    initGuest();
+
+    // Set up Firebase auth state listener
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
+      if (currentUser) {
+        setUser(currentUser);
+        setGuestUser(null); // Clear guest mode when logged in
+      }
       setLoading(false);
     }, (err) => {
       console.error('Auth state change error:', err);
@@ -30,35 +63,31 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setLoading(false);
     });
 
-    // Cleanup on unmount
     return unsubscribe;
   }, []);
 
-  const signUp = async (email: string, password: string, displayName: string): Promise<User> => {
-    try {
-      setError(null);
-      const result = await createUserWithEmailAndPassword(auth, email, password);
-      
-      // Set display name
-      if (result.user) {
-        await updateProfile(result.user, { displayName });
-      }
-      
-      return result.user;
-    } catch (err: any) {
-      const message = err.message || 'Failed to sign up';
-      setError(message);
-      throw err;
-    }
+  const browseAsGuest = () => {
+    const guestId = `guest-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+    localStorage.setItem(GUEST_ID_KEY, guestId);
+    
+    setGuestUser({
+      isGuest: true,
+      id: guestId,
+      requestCount: 0,
+      lastRequestTime: Date.now(),
+    });
+    setUser(null);
   };
 
-  const signIn = async (email: string, password: string): Promise<User> => {
+  const signInWithGoogle = async (): Promise<User> => {
     try {
       setError(null);
-      const result = await signInWithEmailAndPassword(auth, email, password);
+      const provider = new GoogleAuthProvider();
+      const result = await signInWithPopup(auth, provider);
+      setGuestUser(null); // Clear guest mode
       return result.user;
     } catch (err: any) {
-      const message = err.message || 'Failed to sign in';
+      const message = err.message || 'Failed to sign in with Google';
       setError(message);
       throw err;
     }
@@ -69,6 +98,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setError(null);
       await signOut(auth);
       setUser(null);
+      // Clear guest session too
+      localStorage.removeItem(GUEST_ID_KEY);
+      setGuestUser(null);
     } catch (err: any) {
       const message = err.message || 'Failed to sign out';
       setError(message);
@@ -78,16 +110,23 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const clearError = () => setError(null);
 
+  const isGuest = () => !!guestUser && !user;
+
+  const isAuthenticated = !loading && (!!user || !!guestUser);
+
   return (
     <AuthContext.Provider
       value={{
         user,
+        guestUser,
+        isAuthenticated,
         loading,
         error,
-        signUp,
-        signIn,
+        signInWithGoogle,
         logout,
         clearError,
+        browseAsGuest,
+        isGuest,
       }}
     >
       {children}
