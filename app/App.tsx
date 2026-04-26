@@ -1,6 +1,7 @@
 import { Platform, StyleSheet, Text, View, ActivityIndicator, ScrollView, TouchableOpacity } from 'react-native';
 import React, { useState, useMemo, useEffect } from 'react';
 import { SearchBar, FilterButtons, StateFilter, ActivityForm, TrailCard, TrailListView, TrailDetailPage, LoginScreen, UserProfileScreen } from './src/components';
+import { MapView } from './src/components/MapView';
 import { TrailFeature, GeoJSONFeatureCollection } from './src/types';
 import { AuthProvider, useAuth } from './src/context/AuthContext';
 
@@ -228,12 +229,12 @@ function MainApp() {
             loading={loading && useAPI}
           />
         ) : (
-          <View style={styles.mapPlaceholder}>
-            <Text style={styles.mapPlaceholderTitle}>🗺️ Map View Coming Soon</Text>
-            <Text style={styles.mapPlaceholderText}>
-              Interactive map view is coming in the next update!
-            </Text>
-          </View>
+          <MapView
+            trails={filteredData.features}
+            selectedTrail={selectedTrail}
+            onTrailPress={setSelectedTrail}
+            loading={loading && useAPI}
+          />
         )}
       </ScrollView>
     </View>
