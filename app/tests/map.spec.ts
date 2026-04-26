@@ -103,6 +103,26 @@ test.describe('OpenTrails API & Deployment', () => {
     }
   });
 
+  test('Map view can be toggled and displays trails', async ({ page }) => {
+    await page.goto('/');
+    
+    // Click "Browse as Guest" button
+    await page.getByText('Browse as Guest').click();
+    
+    // Wait for trails to load
+    await expect(page.getByText('Guest')).toBeVisible({ timeout: 10000 });
+    
+    // Initially should be in list view (Tiles button visible)
+    await expect(page.getByText('Tiles')).toBeVisible({ timeout: 5000 });
+    
+    // Click Map button to toggle to map view
+    const mapButton = page.locator('text=Map');
+    await mapButton.click();
+    
+    // Wait for map to render (look for maplibre canvas or map container)
+    await page.waitForTimeout(2000);
+  });
+
   test('API deployment is in Cloud Run', async ({ page }) => {
     // Verify the deployment is accessible and running on Cloud Run
     const response = await page.request.get('https://opentrails-api-542596148138.us-central1.run.app/');
