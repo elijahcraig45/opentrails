@@ -11,16 +11,29 @@ const PORT = process.env.PORT || 3001;
 const corsOptions = {
   origin: (origin, callback) => {
     const allowedOrigins = [
+      // Local development
       'http://localhost:3000',
       'http://localhost:8081',
       'http://localhost:8083',
+      // Production
       'https://opentrails.vercel.app',
       'https://www.opentrails.app',
+      // Vercel preview deployments
+      /\.vercel\.app$/,
+      // Environment variable override
       process.env.CORS_ORIGIN
     ].filter(Boolean);
 
+    // Check if origin is allowed (including regex patterns)
+    const isAllowed = allowedOrigins.some(allowed => {
+      if (allowed instanceof RegExp) {
+        return allowed.test(origin);
+      }
+      return allowed === origin;
+    });
+
     // Allow requests with no origin (like mobile or curl requests)
-    if (!origin || allowedOrigins.includes(origin)) {
+    if (!origin || isAllowed) {
       callback(null, true);
     } else {
       console.warn(`CORS rejected origin: ${origin}`);
@@ -35,6 +48,13 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.use(express.json());
+
+// Add logging middleware to debug requests
+app.use((req, res, next) => {
+  const origin = req.headers.origin || 'no-origin';
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.path} from ${origin}`);
+  next();
+});
 
 // Initialize database on startup
 let isDbReady = false;
